@@ -11,47 +11,43 @@
                 string num = Console.ReadLine();
               
                 int indexSpace = num.IndexOf(' ');
-                string left = "";
-                string right = "";
-                long leftSum = 0, rightSum = 0;
+                string left = num.Substring(0, num.IndexOf(" "));
+                string right = num.Substring(num.IndexOf(" ") + 1);
+               
+              //  for (int j = 0; j < indexSpace; j++)
+              //  {
+              //  left += num[j];
+              //  }
 
-                for (int j = 0; j < num.IndexOf(' '); j++)
+              //  for (int k = indexSpace; k < num.Length; k++)
+              //  {
+              //  right += num[k];
+              //  }
+
+                long leftSum = Convert.ToInt64(left);
+                long rightSum = Convert.ToInt64(right);
+
+                long sumDigits = 0;
+                if (leftSum >= rightSum)
                 {
-                    left += num[j];
-                }
-
-                for (int k = num.IndexOf(' '); k < num.Length; k++)
-                {
-                    right += num[k];
-                }
-            
-                    leftSum = long.Parse(left);
-                    rightSum = long.Parse(right);
-
-                    long sum = 0;
-                    if (leftSum > rightSum)
+                    while (leftSum != 0)
                     {
-                        while (leftSum > 0)
-                        {
-                            long lastDigit = leftSum % 10;
-                            sum += lastDigit;
-                            leftSum /= 10;
-                        }
-                        Console.WriteLine(sum);
-                    }
-                    else
-                    {
-                        while (rightSum > 0)
-                        {
-                            long lastDigit = rightSum % 10;
-                            sum += lastDigit;
-                            rightSum /= 10;
-                        }
-                        Console.WriteLine(sum);
+                        sumDigits += leftSum % 10;
+                        leftSum /= 10;
                     }
                 }
+                else
+                {
+                    while (rightSum != 0)
+                    {
+                        sumDigits += rightSum % 10;
+                        rightSum /= 10;
+                    }
 
+                }
+                Console.WriteLine(Math.Abs(sumDigits));
             }
-         
+
         }
     }
+}
