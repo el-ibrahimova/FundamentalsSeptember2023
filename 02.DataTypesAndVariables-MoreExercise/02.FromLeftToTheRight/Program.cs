@@ -46,6 +46,7 @@
 
                 }
                 Console.WriteLine(Math.Abs(sumDigits));
+
             }
 
         }
