@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.DecryptingMessages", "05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.BalancedBrackets", "06.BalancedBrackets\06.BalancedBrackets.csproj", "{56DA321E-958A-4EFC-B77B-5DE4058B2351}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.1.BalancedBrackets", "06.1.BalancedBrackets\06.1.BalancedBrackets.csproj", "{81FE671B-0680-45E5-AC69-27B2554FF30B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{56DA321E-958A-4EFC-B77B-5DE4058B2351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56DA321E-958A-4EFC-B77B-5DE4058B2351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56DA321E-958A-4EFC-B77B-5DE4058B2351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FE671B-0680-45E5-AC69-27B2554FF30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FE671B-0680-45E5-AC69-27B2554FF30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FE671B-0680-45E5-AC69-27B2554FF30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FE671B-0680-45E5-AC69-27B2554FF30B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

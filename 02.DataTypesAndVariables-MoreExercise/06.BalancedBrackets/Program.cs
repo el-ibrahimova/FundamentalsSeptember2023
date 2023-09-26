@@ -11,20 +11,22 @@ namespace _06.BalancedBrackets
             int openBracelet = 0;
             int closeBracelet = 0;
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 string input = Console.ReadLine();
-               
-                 openBracelet = input.IndexOf('(');
-                 closeBracelet = input.IndexOf(')');
-
-                if (openBracelet == '(')
+                
+                if (input == "(")
                 {
                     openBracelet++;
                 }
-                else if (closeBracelet == ')')
+                else if (input == ")")
                 { 
                     closeBracelet++;
+                    if (openBracelet - closeBracelet != 0)
+                    {
+                        Console.WriteLine("UNBALANCED");
+                        return;
+                    }
                 }
             }
 
