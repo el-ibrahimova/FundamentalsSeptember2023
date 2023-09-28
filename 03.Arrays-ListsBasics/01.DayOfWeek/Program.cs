@@ -17,12 +17,12 @@
             int number = int.Parse(Console.ReadLine());
             if (number < 1 || number > 7)
             {
-                Console.WriteLine("Invalid Day!");
+                Console.WriteLine("Invalid day!");
             }
             else
             {
                 Console.WriteLine(days[number-1]);
             }
-        }
+            }
     }
 }
