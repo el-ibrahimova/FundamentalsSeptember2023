@@ -18,7 +18,8 @@
                 {
                     if (arr1[i] == arr2[j])
                     {
-                        Console.Write($"{arr1[i]} ");                      
+                        Console.Write($"{arr1[i]} ");
+                        break;
                     }
                 }
             }
