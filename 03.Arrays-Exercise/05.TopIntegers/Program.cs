@@ -13,7 +13,7 @@
             {
                 bool isTop = true;
 
-                for (int j = i + 1; j < array.Length; j++)
+                for (int j = i + 1; j < array.Length; j++) // j= i+1 => от условието на задачата => търсим числата на дясно от първото
                 {
                     if (array[i] <= array[j])
                     {
