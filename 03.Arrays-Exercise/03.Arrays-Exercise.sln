@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.EqualSum", "06.EqualSum\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.MagicSum", "08.MagicSum\08.MagicSum.csproj", "{90E00286-4EE9-49B6-A260-0ECB264207A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.KaminoFactory", "09.KaminoFactory\09.KaminoFactory.csproj", "{A8782D22-BDEC-4E57-8C10-2D8EFE427557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{90E00286-4EE9-49B6-A260-0ECB264207A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90E00286-4EE9-49B6-A260-0ECB264207A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90E00286-4EE9-49B6-A260-0ECB264207A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8782D22-BDEC-4E57-8C10-2D8EFE427557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8782D22-BDEC-4E57-8C10-2D8EFE427557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8782D22-BDEC-4E57-8C10-2D8EFE427557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8782D22-BDEC-4E57-8C10-2D8EFE427557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
