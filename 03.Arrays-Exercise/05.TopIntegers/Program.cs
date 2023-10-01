@@ -4,15 +4,11 @@
     {
         static void Main(string[] args)
         {
-            string[] inputArr = Console.ReadLine().Split();
-            int[] array = new int[inputArr.Length];
-
-            for (int i = 0; i < inputArr.Length; i++)
-            {
-                array[i] = int.Parse(inputArr[i]);
-            }
-
-
+            int[] array = Console.ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .ToArray();
+           
             for (int i = 0; i < array.Length; i++)
             {
                 bool isTop = true;
@@ -22,6 +18,7 @@
                     if (array[i] <= array[j])
                     {
                         isTop = false;
+                        break;
                     }
                 }
 

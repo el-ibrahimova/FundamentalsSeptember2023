@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Zig-ZagArrays", "03.Zig-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.CommonElements", "02.CommonElements\02.CommonElements.csproj", "{DB4EC95E-01DF-47C1-AAC7-247E04723340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.ArrayRotation", "04.ArrayRotation\04.ArrayRotation.csproj", "{12CE1CC5-9A14-4A65-8367-7E171A5D2530}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.ArrayRotation", "04.ArrayRotation\04.ArrayRotation.csproj", "{12CE1CC5-9A14-4A65-8367-7E171A5D2530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.TopIntegers", "05.TopIntegers\05.TopIntegers.csproj", "{3081D8F3-BC65-45F6-9001-FB28253420CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.TopIntegers", "05.TopIntegers\05.TopIntegers.csproj", "{3081D8F3-BC65-45F6-9001-FB28253420CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.MaxSequenceОfEqualElements", "07.MaxSequenceОfEqualElements\07.MaxSequenceОfEqualElements.csproj", "{60624008-3CAA-43A0-9009-00A543D5FF37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3081D8F3-BC65-45F6-9001-FB28253420CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3081D8F3-BC65-45F6-9001-FB28253420CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3081D8F3-BC65-45F6-9001-FB28253420CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60624008-3CAA-43A0-9009-00A543D5FF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60624008-3CAA-43A0-9009-00A543D5FF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60624008-3CAA-43A0-9009-00A543D5FF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60624008-3CAA-43A0-9009-00A543D5FF37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
