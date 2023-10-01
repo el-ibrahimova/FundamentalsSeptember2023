@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
+using System.Reflection;
 
 namespace _08.CondenseArrayToNumber
 {
@@ -6,22 +8,26 @@ namespace _08.CondenseArrayToNumber
     {
         static void Main(string[] args)
         {
-            int[] numbers = Console.ReadLine()
+            int[] originalArray = Console.ReadLine()
                 .Split()
                 .Select(int.Parse)
                 .ToArray();
 
-            for (int i = 0; i < numbers.Length; i++)
+            int count = originalArray.Length;
+          
+            while (count > 1)
             {
-                while (numbers[i] > 1)
+                for (int i = 0; i < count-1; i++)
                 {
-                    int[] condensed = { numbers.Length };
-                    condensed[i] = numbers[i] + numbers[i + 1];
-                    numbers[i] = condensed[i];
-                }
-                Console.WriteLine(numbers[i]);
-            }           
+                    int[] condenced = new int[count];
 
+                        condenced[i] = originalArray[i] + originalArray[i + 1];
+                    originalArray[i] = condenced[i];
+                }
+               count--;
+            }
+
+            Console.WriteLine(originalArray[0]);
+        }
         }
     }
-}
