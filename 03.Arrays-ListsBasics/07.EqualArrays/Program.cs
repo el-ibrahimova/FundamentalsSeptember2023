@@ -15,8 +15,7 @@
                 .ToArray();
 
             int sum = 0;
-            bool isIdentical = false;
-
+           
             for (int i = 0; i < arr1.Length; i++)
             {
                 if (arr1[i] != arr2[i])
