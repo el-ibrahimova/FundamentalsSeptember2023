@@ -17,10 +17,10 @@
                 current[0] = 1; //Every 1st value in the row is always equal to "1"
                 Console.Write($"{current[0]} ");
                
-                for (int c = 1; c <= r; c++)
+                for (int col = 1; col <= r; col++)
                 {
-                    current[c] = row[c - 1] + row[c];
-                    Console.Write($"{current[c]} ");
+                    current[col] = row[col - 1] + row[col];
+                    Console.Write($"{current[col]} ");
                 }
                 for (int j = 0; j < lines; j++)
                 {
