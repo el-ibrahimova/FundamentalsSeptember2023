@@ -6,10 +6,10 @@
         {
             double grade = double.Parse(Console.ReadLine());
 
-            GradeMethod(grade);
+            PrintGrade(grade);
         }
 
-        private static void GradeMethod(double grade)
+        static void PrintGrade(double grade)
         {
             if (grade >= 2.00 && grade <= 2.99)
             {
