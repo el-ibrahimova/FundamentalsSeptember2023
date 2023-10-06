@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Orders", "05.Orders\05.O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CalculateRectangleArea", "06.CalculateRectangleArea\06.CalculateRectangleArea.csproj", "{51420D55-6AF0-496E-A2E8-75EBFF17EDE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.RepeatString", "07.RepeatString\07.RepeatString.csproj", "{4AC34CCA-ECB5-43C3-B9AE-ADDF871F443C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.MathPower", "08.MathPower\08.MathPower.csproj", "{B93CC2FD-730A-40F0-8F09-A269BB7E8E55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{51420D55-6AF0-496E-A2E8-75EBFF17EDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51420D55-6AF0-496E-A2E8-75EBFF17EDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51420D55-6AF0-496E-A2E8-75EBFF17EDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC34CCA-ECB5-43C3-B9AE-ADDF871F443C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC34CCA-ECB5-43C3-B9AE-ADDF871F443C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC34CCA-ECB5-43C3-B9AE-ADDF871F443C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC34CCA-ECB5-43C3-B9AE-ADDF871F443C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93CC2FD-730A-40F0-8F09-A269BB7E8E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93CC2FD-730A-40F0-8F09-A269BB7E8E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93CC2FD-730A-40F0-8F09-A269BB7E8E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93CC2FD-730A-40F0-8F09-A269BB7E8E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
