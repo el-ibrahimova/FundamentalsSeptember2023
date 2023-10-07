@@ -12,7 +12,7 @@
                 string b = Console.ReadLine();
                 string greaterValue = GetMax(a, b);
                 Console.WriteLine(greaterValue);
-             
+
             }
             else if (type == "int")
             {
@@ -40,15 +40,15 @@
             return b;
         }
 
-      static char GetMax(char a, char b)
+        static char GetMax(char a, char b)
         {
             if (a > b)  //'a' > 'b' => 95 > 96
-                {
+            {
                 return a;
             }
             return b;
         }
-        
+
         static string GetMax(string a, string b)
         {
             // "Stoyan" > "Pesho"
