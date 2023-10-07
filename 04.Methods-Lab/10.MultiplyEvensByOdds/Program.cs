@@ -9,8 +9,7 @@
             int sumOfEven = GetSum(numberAsString, true);
             int sumOfOdd = GetSum(numberAsString, false);
 
-           int result = sumOfOdd * sumOfEven;
-            Console.WriteLine(result);
+           Console.WriteLine(sumOfOdd*sumOfEven);
         }
 
         static int GetSum(string numbers, bool isEven)
