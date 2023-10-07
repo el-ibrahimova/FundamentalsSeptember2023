@@ -5,13 +5,15 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SmallestOfThreeNumbers", "01.SmallestOfThreeNumbers\01.SmallestOfThreeNumbers.csproj", "{B7E3270C-5B7C-4742-ADC1-20C45C17E706}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.NxNMatrix", "07.NxNMatrix\07.NxNMatrix.csproj", "{15C422AA-4726-473B-92D4-432BBB4041F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.NxNMatrix", "07.NxNMatrix\07.NxNMatrix.csproj", "{15C422AA-4726-473B-92D4-432BBB4041F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.VowelsCount", "02.VowelsCount\02.VowelsCount.csproj", "{9B9AC320-E7F7-40A3-BB94-88039D65ED96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.VowelsCount", "02.VowelsCount\02.VowelsCount.csproj", "{9B9AC320-E7F7-40A3-BB94-88039D65ED96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CharactersInRange", "03.CharactersInRange\03.CharactersInRange.csproj", "{85415C2D-717C-4837-B17A-D7C59BAD0B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.CharactersInRange", "03.CharactersInRange\03.CharactersInRange.csproj", "{85415C2D-717C-4837-B17A-D7C59BAD0B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.PasswordValidator", "04.PasswordValidator\04.PasswordValidator.csproj", "{AD410FC2-DB6B-424E-832D-4E07C0BF83BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.PasswordValidator", "04.PasswordValidator\04.PasswordValidator.csproj", "{AD410FC2-DB6B-424E-832D-4E07C0BF83BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.AddAndSubtract", "05.AddAndSubtract\05.AddAndSubtract.csproj", "{236AA83F-AA67-4E0C-9939-0807BEF53BED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{AD410FC2-DB6B-424E-832D-4E07C0BF83BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD410FC2-DB6B-424E-832D-4E07C0BF83BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD410FC2-DB6B-424E-832D-4E07C0BF83BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236AA83F-AA67-4E0C-9939-0807BEF53BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236AA83F-AA67-4E0C-9939-0807BEF53BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236AA83F-AA67-4E0C-9939-0807BEF53BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236AA83F-AA67-4E0C-9939-0807BEF53BED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
