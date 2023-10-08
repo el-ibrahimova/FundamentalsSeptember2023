@@ -79,20 +79,16 @@ namespace _11.ArrayManipulator
                 }
             }
             // END while
-           
             Console.WriteLine($"[{string.Join(", ",numbers)}]");
-
         }
 
         static int [] Exchange(int[] numbers, int index)
         {
-
             if (CheckForOutOfBound(numbers, index)) //масив, в който проверяваме дали индекса не е извън от границите
             {
                 Console.WriteLine("Invalid index");
                 return numbers; // връщаме същия масив, защото метода ни е от тип масив
             }
-
 
             int[] changedArray = new int[numbers.Length];
 
@@ -114,21 +110,21 @@ namespace _11.ArrayManipulator
                 changedArray[changedArrayIndex] = numbers[i];
                 changedArrayIndex++;
             }
-
-            // => numbers = [1,3,5,7,9]
-            // => changedArray = [5, 7, 9, 1, 3]
+            // => numbers = [1,3,5,7,9] => changedArray = [5, 7, 9, 1, 3]
             // за да има numbers[] новото съдържание правим следното:
+            
             numbers = changedArray;
+
             // до тук новия масив съществува само в този метод.
             // За да го подменим в цялата програма правим следното:
             // => връщаме масив с return и променяме типа на масива от void на int []
+            
             return changedArray; 
         }
 
-        static void PrintMaxNumber(int[] numbers, string type)
-        // type = "even" || "odd"
+        static void PrintMaxNumber(int[] numbers, string type)  // type = "even" || "odd"
         {
-            int maxIndex = -1; // границите на масива са от 0 до numbers.Length-1. За да сме сигурни, че индекса е Min => -1
+            int maxIndex = -1; 
             int maxNumber = int.MinValue;
 
             for (int i = 0; i < numbers.Length; i++)
@@ -145,11 +141,7 @@ namespace _11.ArrayManipulator
             PrintIndex(maxIndex);
         }
 
-       
-
-
-        static void PrintMinNumber(int[] numbers, string type)
-        // type = "even" || "odd"
+        static void PrintMinNumber(int[] numbers, string type) // type = "even" || "odd"
         {
             int minIndex = -1; // границите на масива са от 0 до numbers.Length-1. За да сме сигурни, че индекса е Min => -1
             int minNumber = int.MaxValue; 
@@ -167,7 +159,6 @@ namespace _11.ArrayManipulator
             }
             PrintIndex(minIndex);
         }
-        
         static void PrintFirstElements(int[] numbers, int count, string type)
         {
             if (count > numbers.Length)
@@ -192,11 +183,8 @@ namespace _11.ArrayManipulator
             }
             Console.WriteLine($"[{firstElements.Trim(' ',',')}]");
             // с този Trim(' ',',') изтриваме последните символи от firstElements += $"{numbers[i]}, " за да бъде правилна задачата ни
-
             // пример string a = "Alex mu e lo6o..."
-            // Console.WriteLine(a.Trim('.','.','.'));  => Alex mu e lo6o
-
-
+            // => Console.WriteLine(a.Trim('.','.','.'));  => Alex mu e lo6o
         }
 
         static void PrintLastElements(int[] numbers, int count, string type)
@@ -241,17 +229,10 @@ namespace _11.ArrayManipulator
                Console.WriteLine("No matches");
             }
         }
-
         static bool IsOddOrEven(int numbers, string type)
         {
             return (type == "odd" && numbers % 2 != 0) ||
                    (type == "even" && numbers % 2 == 0);
         }
-
-
-
-
-
-
     }
 }
