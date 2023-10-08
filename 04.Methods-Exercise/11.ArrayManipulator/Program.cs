@@ -42,18 +42,21 @@ namespace _11.ArrayManipulator
                     switch (arguments[0]) // четем първия низ от командата
                     {
                         case "exchange":
+                            // пример: exchange 1
                             int index = int.Parse(arguments[1]);
                             // разделяме масива и разменяме местата според подадения индекс
                             Exchange(numbers, index); // създаваме метод, в който ще изпълняваме командата за смяна на индексите
                             break;
 
                         case "max":
+                            // пример: max odd
                             string maxType = arguments[1];
                             // от тук вземаме дали търсим четно или нечетно число
                             PrintMaxNumber(numbers, maxType);  // създаваме метод, който търси max/min odd/even
                             break;
 
                         case "min":
+                            //пример: min even
                             string minType = arguments[1];
                             // от тук вземаме дали търсим четно или нечетно число
                             PrintMinNumber(numbers, minType);  // създаваме метод, който търси max/min odd/even
@@ -61,41 +64,60 @@ namespace _11.ArrayManipulator
 
                         case "first":
                             // пример: first 2 odd
-                            int length = int.Parse(arguments[1]); //парсваме втория индекс =>2
+                            int firstLength = int.Parse(arguments[1]); //парсваме втория индекс =>2
                             string firstType = arguments[2]; // взимаме третия индекс => odd
-                            PrintFirstElements(numbers, length, firstType);
-
+                            PrintFirstElements(numbers, firstLength, firstType); // създаваме метод, който принтира първите n елементи
                             break;
-                        case "last": break;
-                                
+
+                        case "last":
+                            // пример: last 2 odd
+                            int lastLength = int.Parse(arguments[1]); //парсваме втория индекс =>2
+                            string lastType = arguments[2]; // взимаме третия индекс => odd
+                            PrintLastElements(numbers, lastLength, lastType); // създаваме метод, който принтира последните n елементи
+                            break;
                     }
                 }
 
-
+                
             }
+            // END while
+           
+            Console.WriteLine($"[{string.Join(",",numbers)}]");
 
         }
 
-        private static void PrintFirstElements(int[] numbers, int length, string firstType)
+        static void Exchange(int[] numbers, int index)
         {
-            PrintFirstElements(numbers, length, firstType);
+
         }
 
+        static void PrintMaxNumber(int[] numbers, string type)
+        // type = "even" || "odd"
+        {
+
+        }
         static void PrintMinNumber(int[] numbers, string type)
         // type = "even" || "odd"
         {
 
         }
-
-        static void PrintMaxNumber(int[]numbers, string type) 
-            // type = "even" || "odd"
+        
+        static void PrintFirstElements(int[] numbers, int length, string type)
         {
            
+        } 
+        
+        static void PrintLastElements(int[] numbers, int length, string type)
+        {
+            
         }
 
-        static void Exchange(int[] numbers, int index)
-        {
-           
-        }
+        
+
+        
+
+        
+
+        
     }
 }
