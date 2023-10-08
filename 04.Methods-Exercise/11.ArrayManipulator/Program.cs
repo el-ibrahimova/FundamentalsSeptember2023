@@ -77,12 +77,10 @@ namespace _11.ArrayManipulator
                             break;
                     }
                 }
-
-                
             }
             // END while
            
-            Console.WriteLine($"[{string.Join(",",numbers)}]");
+            Console.WriteLine($"[{string.Join(", ",numbers)}]");
 
         }
 
@@ -111,7 +109,7 @@ namespace _11.ArrayManipulator
             }
             // след този цикъл масива има вида changedArray [5, 7, 9, 0, 0] при подаден индекс 2
 
-            for (int i = 0; i < index; i++)
+            for (int i = 0; i <= index; i++)
             {
                 changedArray[changedArrayIndex] = numbers[i];
                 changedArrayIndex++;
@@ -131,11 +129,11 @@ namespace _11.ArrayManipulator
         // type = "even" || "odd"
         {
             int maxIndex = -1; // границите на масива са от 0 до numbers.Length-1. За да сме сигурни, че индекса е Min => -1
-            int maxNumber = 0;
+            int maxNumber = int.MinValue;
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (IsOddOrEven(numbers, type, i))
+                if (IsOddOrEven(numbers[i], type))
                 {
                     if (numbers[i] >= maxNumber)
                     {
@@ -147,27 +145,84 @@ namespace _11.ArrayManipulator
             PrintIndex(maxIndex);
         }
 
-        private static bool IsOddOrEven(int[] numbers, string type, int i)
-        {
-            return (type == "odd" && numbers[i] % 2 != 0) ||
-                                (type == "even" && numbers[i] % 2 == 0);
-        }
+       
 
 
         static void PrintMinNumber(int[] numbers, string type)
         // type = "even" || "odd"
         {
+            int minIndex = -1; // границите на масива са от 0 до numbers.Length-1. За да сме сигурни, че индекса е Min => -1
+            int minNumber = int.MaxValue; 
 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (IsOddOrEven(numbers[i], type))
+                {
+                    if (numbers[i] <= minNumber)
+                    {
+                        minNumber = numbers[i];
+                        minIndex = i;
+                    }
+                }
+            }
+            PrintIndex(minIndex);
         }
         
-        static void PrintFirstElements(int[] numbers, int length, string type)
+        static void PrintFirstElements(int[] numbers, int count, string type)
         {
-           
-        } 
-        
-        static void PrintLastElements(int[] numbers, int length, string type)
-        {
+            if (count > numbers.Length)
+            {
+                Console.WriteLine("Invalid count");
+                return;
+            }
             
+            string firstElements = "";
+            int elementCount = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (IsOddOrEven(numbers[i], type))
+                {
+                    firstElements += $"{numbers[i]}, "; // стринг, в който изписваме всички елементи, отговарящи на условието/използваме конкатенация
+                    elementCount++;
+                    if (elementCount >= count)
+                    {
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine($"[{firstElements.Trim(' ',',')}]");
+            // с този Trim(' ',',') изтриваме последните символи от firstElements += $"{numbers[i]}, " за да бъде правилна задачата ни
+
+            // пример string a = "Alex mu e lo6o..."
+            // Console.WriteLine(a.Trim('.','.','.'));  => Alex mu e lo6o
+
+
+        }
+
+        static void PrintLastElements(int[] numbers, int count, string type)
+        {
+            if (count > numbers.Length)
+            {
+                Console.WriteLine("Invalid count");
+                return;
+            }
+
+            string lastElements = "";
+            int elementCount = 0;
+            // <= обръщаме логиката
+            for (int i = numbers.Length-1; i >=0; i--)
+            {
+                if (IsOddOrEven(numbers[i], type))
+                {
+                    lastElements = $"{numbers[i]}, "+ lastElements; // стринг, в който изписваме всички елементи, отговарящи на условието/използваме конкатенация
+                    elementCount++;
+                    if (elementCount == count)
+                    {
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine($"[{lastElements.Trim(' ', ',')}]");
         }
 
         static bool CheckForOutOfBound(int[] numbers, int index)
@@ -175,11 +230,11 @@ namespace _11.ArrayManipulator
             return index < 0 || index >= numbers.Length;
         }
 
-        static void PrintIndex(int maxIndex)
+        static void PrintIndex(int index)
         {
-            if (maxIndex != -1) // не е намерен мах индекс =>остава си първоначалната ст-ст
+            if (index != -1) // не е намерен индекс =>остава си първоначалната ст-ст
             {
-                 Console.WriteLine(maxIndex);
+                 Console.WriteLine(index);
             }
             else
             {
@@ -187,7 +242,11 @@ namespace _11.ArrayManipulator
             }
         }
 
-
+        static bool IsOddOrEven(int numbers, string type)
+        {
+            return (type == "odd" && numbers % 2 != 0) ||
+                   (type == "even" && numbers % 2 == 0);
+        }
 
 
 
