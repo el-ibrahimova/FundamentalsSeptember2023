@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DataType", "01.DataType\01.DataType.csproj", "{3CDA1753-C491-422D-B2AF-EF4AF5272109}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MultiplicationSign", "05.MultiplicationSign\05.MultiplicationSign.csproj", "{EAA6DF68-E925-44F5-BB5E-99BBEEAB2F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.TribonacciSequence", "04.TribonacciSequence\04.TribonacciSequence.csproj", "{A5B95DFF-99D1-43A0-9C6F-4111874884AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3CDA1753-C491-422D-B2AF-EF4AF5272109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CDA1753-C491-422D-B2AF-EF4AF5272109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CDA1753-C491-422D-B2AF-EF4AF5272109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA6DF68-E925-44F5-BB5E-99BBEEAB2F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA6DF68-E925-44F5-BB5E-99BBEEAB2F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA6DF68-E925-44F5-BB5E-99BBEEAB2F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA6DF68-E925-44F5-BB5E-99BBEEAB2F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B95DFF-99D1-43A0-9C6F-4111874884AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B95DFF-99D1-43A0-9C6F-4111874884AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B95DFF-99D1-43A0-9C6F-4111874884AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B95DFF-99D1-43A0-9C6F-4111874884AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
