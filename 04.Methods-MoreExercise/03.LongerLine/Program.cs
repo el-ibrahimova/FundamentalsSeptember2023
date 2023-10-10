@@ -4,29 +4,45 @@
     {
         static void Main(string[] args)
         {
-            double firstX1 = double.Parse(Console.ReadLine());
-            double firstY1 = double.Parse(Console.ReadLine());
-            double firstX2 = double.Parse(Console.ReadLine());
-            double firstY2 = double.Parse(Console.ReadLine());
+            double x1 = double.Parse(Console.ReadLine());
+            double y1 = double.Parse(Console.ReadLine());
+            double x2 = double.Parse(Console.ReadLine());
+            double y2 = double.Parse(Console.ReadLine());
 
-            double secondX1 = double.Parse(Console.ReadLine());
-            double secondY1 = double.Parse(Console.ReadLine());
-            double secondX2 = double.Parse(Console.ReadLine());
-            double secondY2 = double.Parse(Console.ReadLine());
+            double x3 = double.Parse(Console.ReadLine());
+            double y3 = double.Parse(Console.ReadLine());
+            double x4 = double.Parse(Console.ReadLine());
+            double y4 = double.Parse(Console.ReadLine());
 
+            LongestLine(x1, y1, x2, y2, x3, y3, x4, y4);
+        }
 
-        //    (x1 - x2) ^ 2 + (y1 - y2) ^ 2
-
-            double first = Math.Sqrt(Math.Pow(firstY1-firstY2, 2) + Math.Pow(firstX1-firstX2, 2));
-            double second = Math.Sqrt(Math.Pow(secondY1 -secondY2, 2) + Math.Pow(secondX1-secondX2, 2));
-
+        static void ClosestToZero(double a, double b, double c, double d)
+        {
+            double first = Math.Sqrt(Math.Pow(Math.Abs(a), 2) + Math.Pow(Math.Abs(b), 2));
+            double second = Math.Sqrt(Math.Pow(Math.Abs(c), 2) + Math.Pow(Math.Abs(d), 2));
             if (first > second)
             {
-                Console.WriteLine($"({firstX2}, {firstY2})({firstX1}, {firstY1})");
+                Console.WriteLine($"({c}, {d})({a}, {b})");
             }
-            else if (second > first)
+            else
             {
-                Console.WriteLine($"({secondX2}, {secondY2})({secondX1}, {secondY1})");
+                Console.WriteLine($"({a}, {b})({c}, {d})");
+            }
+        }
+
+        static void LongestLine(double a, double b, double c, double d, double e, double f, double g, double h)
+        {
+            //    (x1 - x2) ^ 2 + (y1 - y2) ^ 2
+            double firstLine = Math.Sqrt(Math.Pow(Math.Abs(a - c), 2) + Math.Pow(Math.Abs(b - d), 2));
+            double secondLine = Math.Sqrt(Math.Pow(Math.Abs(e - g), 2) + Math.Pow(Math.Abs(f - h), 2));
+            if (firstLine >= secondLine)
+            {
+                ClosestToZero(a, b, c, d);
+            }
+            else
+            {
+                ClosestToZero(e, f, g, h);
             }
         }
     }
