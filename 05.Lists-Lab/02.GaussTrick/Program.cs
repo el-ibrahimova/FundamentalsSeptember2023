@@ -27,7 +27,6 @@ namespace _02.GaussTrick
                 result.Add(numbers[middleIndex]);
             }
 
-
             Console.WriteLine(string.Join(" ", result));
         }
     }
