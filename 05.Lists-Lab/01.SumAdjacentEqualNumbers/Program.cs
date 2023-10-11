@@ -5,9 +5,9 @@ namespace _01.SumAdjacentEqualNumbers
     {
         static void Main(string[] args)
         {
-            List<decimal> numbers = Console.ReadLine()
+            List<double> numbers = Console.ReadLine()
                 .Split()
-                .Select(decimal.Parse)
+                .Select(double.Parse)
                 .ToList();
 
             for (int i = 0; i < numbers.Count-1; i++)
@@ -17,6 +17,7 @@ namespace _01.SumAdjacentEqualNumbers
                     numbers[i] += numbers[i + 1];
                     numbers.RemoveAt(i + 1);
                     i=-1; // Понеже сме премахнали един елемент и номерата на индексите са се променили
+                    // за да можем да се върнем и да сметнем и нулевия индекс
                 }
             }
             Console.WriteLine(string.Join(" ", numbers));
