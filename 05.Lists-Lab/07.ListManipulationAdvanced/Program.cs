@@ -4,26 +4,61 @@
     {
         static void Main(string[] args)
         {
-            List<int> numbers = Console.ReadLine()
-                .Split()
-                .Select(int.Parse)
-                .ToList();
+            List<int> originalNumbers = Console.ReadLine()
+                 .Split()
+                 .Select(int.Parse)
+                 .ToList();
 
-            string line;
-            bool isAnyChanges = false;
+            List<int> copiedNumbers = new List<int>(originalNumbers);
 
-            while ((line = Console.ReadLine()) != "end")
+            List<int> evenNumbers = new List<int>();
+            List<int> oddNumbers = new List<int>();
+
+            bool changesMade = false;
+
+            string input;
+
+            while ((input = Console.ReadLine()) != "end")
             {
-                string[] lineTokens = line.Split().ToArray();
-                string command = lineTokens[0];
+                List<string> commands = input
+                    .Split()
+                    .ToList();
 
-                
+                string command = commands[0];
 
-                if (command == "Contains")
+                if (command == "Add" || command == "Remove" || command == "RemoveAt" || command == "Insert")
                 {
-                    int number = int.Parse(lineTokens[1]);
+                    changesMade = true;
+                }
 
-                    if (numbers.Contains(number))
+                List<int> filteredNumbers = new List<int>();
+
+                if (command == "Add")
+                {
+                    int numberToAdd = int.Parse(commands[1]);
+                    copiedNumbers.Add(numberToAdd);
+                }
+                else if (command == "Remove")
+                {
+                    int numberToRemove = int.Parse(commands[1]);
+                    copiedNumbers.Remove(numberToRemove);
+                }
+                else if (command == "RemoveAt")
+                {
+                    int index = int.Parse(commands[1]);
+                    copiedNumbers.RemoveAt(index);
+                }
+                else if (command == "Insert")
+                {
+                    int numberToInsert = int.Parse(commands[1]);
+                    int index = int.Parse(commands[2]);
+                    copiedNumbers.Insert(index, numberToInsert);
+                }
+                else if (command == "Contains")
+                {
+                    int containedNumber = int.Parse(commands[1]);
+
+                    if (originalNumbers.Contains(containedNumber))
                     {
                         Console.WriteLine("Yes");
                     }
@@ -32,123 +67,118 @@
                         Console.WriteLine("No such number");
                     }
                 }
-
-
-                if (command == "PrintEven")
+                else if (command == "PrintEven")
                 {
-                    List<int> evenNumber = new List<int>();
-
-                    for (int i = 0; i < numbers.Count; i++)
-                    {
-                        if (numbers[i] % 2 == 0)
-                        {
-                            evenNumber.Add(numbers[i]);
-
-                        }
-                    }
-                    Console.WriteLine(string.Join(" ", evenNumber));
+                    PrintingEvenNumbers(originalNumbers, evenNumbers);
                 }
-
-                if (command == "PrintOdd")
+                else if (command == "PrintOdd")
                 {
-                    List<int> oddNumber = new List<int>();
-
-                    for (int i = 0; i < numbers.Count; i++)
-                    {
-                        if (numbers[i] % 2 != 0)
-                        {
-                            oddNumber.Add(numbers[i]);
-
-                        }
-                    }
-                    Console.WriteLine(string.Join(" ", oddNumber));
+                    PrintingOddNumbers(originalNumbers, oddNumbers);
                 }
-
-                if (command == "GetSum")
-                { 
-                    int sum = 0;
-                    for (int i = 0; i < numbers.Count; i++)
-                    {
-                        sum += numbers[i];
-                    }
-                    Console.WriteLine(sum);
+                else if (command == "GetSum")
+                {
+                    Console.WriteLine(originalNumbers.Sum());
+                }
+                else if (command == "Filter")
+                {
+                    FilterCommand(originalNumbers, commands, filteredNumbers);
                 }
 
                 
-                if (command == "Filter")
+            }
+
+            ChekingForChanges(changesMade, copiedNumbers);
+        }
+
+        private static void ChekingForChanges(bool changesMade, List<int> copiedNumbers)
+        {
+            if (changesMade)
+            {
+                Console.WriteLine(string.Join(' ', copiedNumbers));
+            }
+        }
+
+        private static void FilterCommand(List<int> numbers, List<string> commands, List<int> filteredNumbers)
+        {
+            string condition = commands[1];
+
+            int filterNumber = int.Parse(commands[2]);
+
+            if (condition == "<")
+            {
+                for (int i = 0; i < numbers.Count; i++)
                 {
-                    string condition = lineTokens[1];
-                    int numberToFilter = int.Parse(lineTokens[2]);
+                    if (numbers[i] < filterNumber)
+                    {
+                        filteredNumbers.Add(numbers[i]);
+                    }
+                }
 
-                    if (condition == ">")
+                Console.WriteLine(string.Join(" ", filteredNumbers));
+            }
+            else if (condition == ">")
+            {
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    if (numbers[i] > filterNumber)
                     {
-                        List<int> conditionBigger = new List<int>();
-                        for (int i = 0; i < numbers.Count; i++)
-                        {
-                            if (numbers[i] > numberToFilter)
-                            {
-                                conditionBigger.Add(numbers[i]);
-                            }
-                            isAnyChanges = true;
-                            numbers = conditionBigger;
-                            Console.Write(string.Join(" ", conditionBigger));
-                            
-                        }
+                        filteredNumbers.Add(numbers[i]);
                     }
-                    else if (condition == "<")
-                    {
-                        List<int> conditionSmaller = new List<int>();
-                        for (int i = 0; i < numbers.Count; i++)
-                        {
-                            if (numbers[i] < numberToFilter)
-                            {
-                                conditionSmaller.Add(numbers[i]);
-                            }
-                            isAnyChanges = true;
-                            numbers = conditionSmaller;
-                            Console.Write(string.Join(" ", conditionSmaller));
-                            
-                        }
-                    }
-                    else if (condition == ">=")
-                    {
-                        List<int> conditionBiggerOrEqual = new List<int>();
-                        for (int i = 0; i < numbers.Count; i++)
-                        {
-                            if (numbers[i] >= numberToFilter)
-                            {
-                                conditionBiggerOrEqual.Add(numbers[i]);
-                            }
-                            isAnyChanges = true;
-                            numbers = conditionBiggerOrEqual;
-                            Console.Write(string.Join(" ", conditionBiggerOrEqual));
-                           
-                        }
-                    }
-                    else if (condition == "<=")
-                    {
-                        List<int> conditionSmallerOrEqual = new List<int>();
-                        for (int i = 0; i < numbers.Count; i++)
-                        {
-                            if (numbers[i] <= numberToFilter)
-                            {
-                                conditionSmallerOrEqual.Add(numbers[i]);
-                            }
-                            isAnyChanges = true;
-                             numbers = conditionSmallerOrEqual;
-                            Console.Write(string.Join(" ", conditionSmallerOrEqual));
-                           
-                        }
-                    }
+                }
 
+                Console.WriteLine(string.Join(" ", filteredNumbers));
+            }
+            else if (condition == ">=")
+            {
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    if (numbers[i] >= filterNumber)
+                    {
+                        filteredNumbers.Add(numbers[i]);
+                    }
+                }
+
+                Console.WriteLine(string.Join(" ", filteredNumbers));
+            }
+            else if (condition == "<=")
+            {
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    if (numbers[i] <= filterNumber)
+                    {
+                        filteredNumbers.Add(numbers[i]);
+                    }
+                }
+
+                Console.WriteLine(string.Join(" ", filteredNumbers));
+            }
+        }
+
+        private static void PrintingOddNumbers(List<int> numbers, List<int> oddNumbers)
+        {
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 != 0)
+                {
+                    oddNumbers.Add(numbers[i]);
                 }
             }
 
+            Console.WriteLine(string.Join(" ", oddNumbers));
+        }
 
-            if (isAnyChanges == true)
-            { 
-                Console.WriteLine(string.Join(" ", numbers)); 
+        private static void PrintingEvenNumbers(List<int> numbers, List<int> evenNumbers)
+        {
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    evenNumbers.Add(numbers[i]);
+                }
             }
+
+            Console.WriteLine(string.Join(" ", evenNumbers));
         }
     }
 }
+
