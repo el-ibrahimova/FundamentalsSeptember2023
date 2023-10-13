@@ -18,10 +18,19 @@
                 if (arguments[0] == "Delete")
                 {
                     int element = int.Parse(arguments[1]);
-                    numbers.Remove(element);
+                    numbers.RemoveAll(x=> x==element); // x=>x == element == премахва всички елементи, равни на дадения = предикат
+
+                   // for (int i = 0; i < numbers.Count; i++)
+                   //{
+                   //     if (numbers[i] == element)
+                   //     {
+                   //         numbers.Remove(element);
+                   //         i--;
+                   //     }
+                   // }
                 }
 
-                if (arguments[0] == "Insert")
+                else if (arguments[0] == "Insert")
                 {
                     int element = int.Parse(arguments[1]);
                     int position = int.Parse(arguments[2]);
