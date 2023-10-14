@@ -43,12 +43,12 @@
             if (player1.Count > 0)
             {
                 int sum = player1.Sum();
-                Console.WriteLine($"First player wins! Sum: {sum}.");
+                Console.WriteLine($"First player wins! Sum: {sum}");
             }
             else if (0 < player2.Count)
             {
                 int sum = player2.Sum();
-                Console.WriteLine($"Second player wins! Sum: {sum}.");
+                Console.WriteLine($"Second player wins! Sum: {sum}");
             }
         }
     }
