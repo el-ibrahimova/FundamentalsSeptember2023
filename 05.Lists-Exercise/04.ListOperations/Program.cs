@@ -52,7 +52,7 @@
                 {
                     int count = int.Parse(arguments[2]);
                     string direction = arguments[1];
-                    count = count % numbers.Count; 
+                    count = count % numbers.Count;
                     // 20 % 5 = 0 // Превъртаме count, за да бъде в границите на листа
                     // [1 2 3 4 5]
 
@@ -71,13 +71,10 @@
                         List<int> shiftedPart = numbers.GetRange(numbers.Count - count, count);
                         numbers.RemoveRange(numbers.Count - count, count);
                         numbers.InsertRange(0, shiftedPart);
-
                     }
                 }
-
             }
             Console.WriteLine(string.Join(" ", numbers));
-
         }
 
         static bool IsNotValidIndex(int index, int numbersCount)
