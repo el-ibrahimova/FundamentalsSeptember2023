@@ -42,7 +42,10 @@
             foreach (string guest in guestList)
             {
                 Console.WriteLine(guest);
-            }
+               
+            } 
+            // друг вариант е  Console.WriteLine(string.Join("\n", guestList))
+                // където "\n" отпечатва елементите от листа на нови редове
         }
         
     }
