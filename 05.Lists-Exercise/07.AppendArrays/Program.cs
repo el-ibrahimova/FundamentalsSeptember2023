@@ -21,12 +21,15 @@
         {
             List<string> result = new List<string>();
 
-            foreach (string sequence in stringArrays)
+
+            for (int i = stringArrays.Length - 1; i >= 0; i--)
             {
+                string sequence = stringArrays[i];
                 string[] array = sequence.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 result.AddRange(array);
             }
-                return result;
+            // използваме обърнат for цикъл, за да подредим новия лист от дясно на ляво = по условие
+            return result;
         }
     }
 }
