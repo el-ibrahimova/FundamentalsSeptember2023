@@ -33,8 +33,6 @@
                     {
                         list[i] = list[i] - 1;
                     }
-
-
                 }
 
                 command = Console.ReadLine().Split().ToList();
