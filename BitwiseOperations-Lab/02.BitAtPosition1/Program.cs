@@ -10,9 +10,10 @@ namespace _02.BitAtPosition1
         static void Main(string[] args)
         {
             int number = int.Parse(Console.ReadLine());
-            int mask = 1 << 1;//after shift left with 1 we have 1 value in mask at position 1 another are 0
+            int shiftedNumber = 1 << 1;// след изместване на ляво с 1 клетка ние имаме стойността 1 в shiftedNumber на позиция 1, а другите са 0
 
-            int result = (number & mask) >> 1;//after shift right with 1 taken last value(0 or 1) because another are 0 using &
+            int result = (number & shiftedNumber) >> 1;// след изместване на дясно с 1 взимаме последната стойност (0 или 1)
+                                                       // защото другите са 0 използвайки логическия оператор & == умножение
             Console.WriteLine(result);
 
         }

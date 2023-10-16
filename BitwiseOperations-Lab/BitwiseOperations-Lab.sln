@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BinaryDigitsCount", "01.BinaryDigitsCount\01.BinaryDigitsCount.csproj", "{06CD9D9A-45B4-4AF4-A1DD-C9E9C63FEBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.BinaryDigitsCount", "01.BinaryDigitsCount\01.BinaryDigitsCount.csproj", "{06CD9D9A-45B4-4AF4-A1DD-C9E9C63FEBE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.BitAtPosition1", "02.BitAtPosition1\02.BitAtPosition1.csproj", "{F7597603-D074-431F-96A9-2153F9CBD5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.BitAtPosition1", "02.BitAtPosition1\02.BitAtPosition1.csproj", "{F7597603-D074-431F-96A9-2153F9CBD5BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P-thBit", "P-thBit\P-thBit.csproj", "{FAA88A4F-9B70-47B0-9967-22BAD47BDD48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F7597603-D074-431F-96A9-2153F9CBD5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7597603-D074-431F-96A9-2153F9CBD5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7597603-D074-431F-96A9-2153F9CBD5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA88A4F-9B70-47B0-9967-22BAD47BDD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA88A4F-9B70-47B0-9967-22BAD47BDD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA88A4F-9B70-47B0-9967-22BAD47BDD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA88A4F-9B70-47B0-9967-22BAD47BDD48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
