@@ -19,7 +19,6 @@
             // 010100000001 = result
             
             
-            
             int mask = 1 << position;
             int reversed = ~mask;
             int result = number & reversed;
