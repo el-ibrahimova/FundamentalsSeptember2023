@@ -11,31 +11,30 @@
             for (int i = 0; i < wagon.Length; i++)
             {
                 int currentWagon = wagon[i];
+                int wagonCapacity = 4;
 
-                if (currentWagon < 4)
+                if (currentWagon < wagonCapacity)
                 {
-                    int emptySeats = 4 - wagon[i];
+                    int emptySeats = wagonCapacity - wagon[i];
                     people -= emptySeats;
                     if (people < 0)
                     {
-                        wagon[i] = 4 - Math.Abs(people);
+                        wagon[i] = wagonCapacity - Math.Abs(people);
                         Console.WriteLine("The lift has empty spots!");
                         PrintWagon(wagon);
                         return;
                     }
-                    wagon[i] = 4;
+                    wagon[i] = wagonCapacity;
                 }
             }
 
             if (people != 0)
             {
                 Console.WriteLine($"There isn't enough space! {people} people in a queue!");
-                PrintWagon(wagon);
             }
-            else // people = 0 && wagons =0
-            {
+            
                 PrintWagon(wagon);
-            }
+            
         }
 
         static void PrintWagon(int[] wagon)
