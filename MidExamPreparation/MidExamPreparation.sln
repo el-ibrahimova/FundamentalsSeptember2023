@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.HeartDelivery", "03.Hear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.GuineaPig", "01.GuineaPig\01.GuineaPig.csproj", "{63867E46-C1BC-4EF9-AAB3-011BE785781C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TheLift", "02.TheLift\02.TheLift.csproj", "{AB88FAED-0B6D-412D-BD4C-9DAEF81114A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{63867E46-C1BC-4EF9-AAB3-011BE785781C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63867E46-C1BC-4EF9-AAB3-011BE785781C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63867E46-C1BC-4EF9-AAB3-011BE785781C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB88FAED-0B6D-412D-BD4C-9DAEF81114A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB88FAED-0B6D-412D-BD4C-9DAEF81114A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB88FAED-0B6D-412D-BD4C-9DAEF81114A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB88FAED-0B6D-412D-BD4C-9DAEF81114A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
