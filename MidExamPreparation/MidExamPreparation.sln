@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.ShootForTheWin", "02.Sho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingList", "ShoppingList\ShoppingList.csproj", "{5EF7A6A8-A79B-4A12-86CE-81E5F150BC43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HeartDelivery", "03.HeartDelivery\03.HeartDelivery.csproj", "{F35491E4-836C-44D4-8EDF-D9FD7087C50A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5EF7A6A8-A79B-4A12-86CE-81E5F150BC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EF7A6A8-A79B-4A12-86CE-81E5F150BC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EF7A6A8-A79B-4A12-86CE-81E5F150BC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35491E4-836C-44D4-8EDF-D9FD7087C50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35491E4-836C-44D4-8EDF-D9FD7087C50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35491E4-836C-44D4-8EDF-D9FD7087C50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35491E4-836C-44D4-8EDF-D9FD7087C50A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

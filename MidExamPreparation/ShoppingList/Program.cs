@@ -22,7 +22,6 @@
                     string item = command[1];
                     if (!initialList.Contains(item))
                     {
-
                         initialList.Insert(0, item);
                     }
                 }
@@ -59,9 +58,7 @@
                 input = command[0];
             }
 
-            
             Console.Write(string.Join(", ", initialList));
-
 
         }
     }
