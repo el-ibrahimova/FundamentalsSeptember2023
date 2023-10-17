@@ -1,61 +1,65 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace _03.HeartDelivery
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            List<string> address = Console.ReadLine().Split('@').ToList();
+            List<int> address = Console.ReadLine()
+                .Split("@")
+                .Select(int.Parse)
+                .ToList();
 
-            List<string> command = Console.ReadLine().Split().ToList();
-
-            string input = command[0];
-            int cellIndex = 0;
-            int houseCounter = 0;
+            string input = Console.ReadLine();
+            int currentPossition = 0;
 
             while (input != "Love!")
             {
-                int length = int.Parse(command[1]);
+                List<string> inputArg = input
+                    .Split()
+                    .ToList();
 
-                if (input == "Jump")
+                if (inputArg[0] == "Jump")
                 {
-                    cellIndex += length;
-
-                    if (cellIndex < 0 || cellIndex >= address.Count)
-                    {
-                        cellIndex = cellIndex % address.Count;
-                    }
-                    int newValue = int.Parse(address[cellIndex]);
-
-                    if (newValue == 0)
-                    {
-                        Console.WriteLine($"Place {cellIndex} already had Valentine's day.");
-
-                    }
-                    newValue = newValue - 2;
-                    address[cellIndex] = newValue.ToString();
-
-
-                    if (newValue == 0)
-                    {
-                        Console.WriteLine($"Place {cellIndex} has Valentine's day.");
-                        houseCounter++;
-                    }
-
+                    currentPossition += int.Parse(inputArg[1]);
                 }
 
-                command = Console.ReadLine().Split().ToList();
-                input = command[0];
+                // ако позицията излезне от границите на листа от дясно
+                if (currentPossition > address.Count - 1)
+                {
+                    currentPossition = 0;
+                }
+
+                if (address[currentPossition] == 0)
+                {
+                    Console.WriteLine($"Place {currentPossition} already had Valentine's day.");
+                }
+                else
+                {
+                    address[currentPossition] -= 2;
+
+                    if (address[currentPossition] == 0)
+                    {
+                        Console.WriteLine($"Place {currentPossition} has Valentine's day.");
+                    }
+                }
+                input = Console.ReadLine();
             }
-            Console.WriteLine($"Cupid's last position was {cellIndex}.");
-            if (houseCounter == address.Count)
+
+            Console.WriteLine($"Cupid's last position was {currentPossition}.");
+
+            int counter = address.Count(h => h > 0);
+
+            if (address.Sum() == 0)
             {
                 Console.WriteLine("Mission was successful.");
             }
             else
             {
-                Console.WriteLine($"Cupid has failed {address.Count - houseCounter} places.");
+                Console.WriteLine($"Cupid has failed {counter} places.");
             }
         }
     }

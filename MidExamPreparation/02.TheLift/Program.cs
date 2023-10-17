@@ -31,9 +31,12 @@
             if (people != 0)
             {
                 Console.WriteLine($"There isn't enough space! {people} people in a queue!");
-            }
-            
                 PrintWagon(wagon);
+            }
+            else
+            {
+                PrintWagon(wagon);
+            }
             
         }
 
