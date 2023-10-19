@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 internal class Program
 {
@@ -15,7 +16,7 @@ internal class Program
         while ((input = Console.ReadLine()) != "end")
         {
             int[] indexes = input
-                .Split()
+                .Split(" ",StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
 
@@ -36,42 +37,46 @@ internal class Program
                 sequence.InsertRange(middleIndex, newElements);
 
                 Console.WriteLine("Invalid input! Adding additional elements to the board");
-            }
-            // two matching elements
+            }          
             else
-            {
+            {  // hit two matching elements
                 if (sequence[firstIndex] == sequence[secondIndex])
                 {
-                    Console.WriteLine($"Congrats! You have found matching elements - ${sequence[firstIndex]}!");
-
-                    if (secondIndex > firstIndex)
+                    Console.WriteLine($"Congrats! You have found matching elements - {sequence[firstIndex]}!");
+                    // трябва да изтрием индексите от дясно на ляво, за да не се разместят индексите
+                    // търсим кой е по-големия индекс и трием първо него
+                    if (firstIndex < secondIndex)
                     {
-                        sequence.RemoveAt(secondIndex);
                         sequence.RemoveAt(firstIndex);
+                        sequence.RemoveAt(secondIndex - 1);
                     }
                     else
                     {
-                        sequence.RemoveAt(firstIndex);
                         sequence.RemoveAt(secondIndex);
+                        sequence.RemoveAt(firstIndex - 1);
                     }
                 }
-                else
+                else if (sequence[firstIndex] != sequence[secondIndex])
+                // hit two different elements
                 {
                     Console.WriteLine("Try again!");
                 }
             }
 
-
-            if (movesCount == sequence.Count / 2)
+            // hit all matching elements
+            if (sequence.Count ==0)
             {
                 Console.WriteLine($"You have won in {movesCount} turns!");
                 break;
             }
         }
 
-
-        Console.WriteLine("Sorry you lose :(");
-        Console.WriteLine(string.Join(" ", sequence));
+        // receives "end" before hits all matching elements
+        if (sequence.Count != 0)
+        {
+            Console.WriteLine("Sorry you lose :(");
+            Console.WriteLine(string.Join(" ", sequence));
+        }
 
     }
 
