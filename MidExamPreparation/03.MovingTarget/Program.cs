@@ -5,64 +5,56 @@
         static void Main(string[] args)
         {
             List<int> targets = Console.ReadLine()
-           .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-           .Select(int.Parse)
-           .ToList();
-
-            List <string> input = Console.ReadLine().Split().ToList();
-
-            string command = input[0];
-
-           
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToList();
+            string command = Console.ReadLine();
             while (command != "End")
             {
-                int index = int.Parse(input[1]);
-
-                if (command == "Shoot")
+                string[] comArg = command.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string firstCom = comArg[0];
+                int index = int.Parse(comArg[1]);
+                int power = int.Parse(comArg[2]);
+                if (firstCom == "Shoot")
                 {
-                    int power = int.Parse(input[2]);
-
                     if (index >= 0 && index < targets.Count)
                     {
-                        targets[index] -= power;
-
-                        if (targets[index] <= 0)
+                        if (targets[index] > power) // if targets is bigger than power
+                        {
+                            targets[index] -= power;
+                        }
+                        else
                         {
                             targets.RemoveAt(index);
                         }
+
                     }
                 }
-                else if (command == "Add")
-                {
-                    int value = int.Parse(input[2]);
 
-                    if (index >= 0 && index < input.Count)
+                else if (firstCom == "Add")
+                {
+                    if (index >= 0 && index < targets.Count)
                     {
-                        targets.Insert(index, value);
+                        targets.Insert(index, power);
                     }
                     else
                     {
-                        Console.WriteLine("Invalid placement!");
+                        Console.WriteLine($"Invalid placement!");
                     }
                 }
-                else if (command == "Strike")
+
+                else if (firstCom == "Strike")
                 {
-                    int radius = int.Parse(input[2]);
-                    int radiusRight = index + radius;
-                    int radiusLeft = index - radius;
 
-                    if (radiusLeft >= 0 && radiusRight < targets[targets.Count - 1])
+                    if (index - power >= 0 && index + power < targets.Count) // validate index and radius
                     {
-                        // трябва изтриването на индексите да върви от дясно на ляво, за да не се налага преоразмеряването на листа
 
-                        for (int i = 1; i <= radius; i++)
+                        for (int i = 1; i <= power; i++)
                         {
                             targets.RemoveAt(index + i);
                         }
-
                         targets.RemoveAt(index);
-
-                        for (int i = 1; i <= radius; i++)
+                        for (int i = 1; i <= power; i++)
                         {
                             targets.RemoveAt(index - i);
                         }
@@ -72,6 +64,7 @@
                         Console.WriteLine($"Strike missed!");
                     }
                 }
+                command = Console.ReadLine();
             }
 
             Console.WriteLine(string.Join("|", targets));
