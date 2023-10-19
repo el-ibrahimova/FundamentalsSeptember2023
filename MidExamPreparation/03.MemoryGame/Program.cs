@@ -5,40 +5,79 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        List<int> numbers = Console.ReadLine().
-            Split(" ", StringSplitOptions.RemoveEmptyEntries).
-            Select(int.Parse).
-            ToList();
+        List<string> sequence = Console.ReadLine()
+            .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+            .ToList();
 
-        List<string> input = Console.ReadLine().Split().ToList();
-        string index = input[0];
-        int count = 0;
+        int movesCount = 0;
+        string input;
 
-        while (index != "end")
+        while ((input = Console.ReadLine()) != "end")
         {
-            int firstIndex = int.Parse(input[0]);
-            int secondIndex = int.Parse(input[1]);
-            count++;
+            int[] indexes = input
+                .Split()
+                .Select(int.Parse)
+                .ToArray();
 
 
-            if (CheckIndexes(numbers, firstIndex, secondIndex))
+            int firstIndex = indexes[0];
+            int secondIndex = indexes[1];
+            movesCount++;
+
+            // check players cheat
+            if (CheckIndexes(sequence, firstIndex, secondIndex))
             {
-                int middleIndex = numbers.Count / 2;
-                string firstIndexElement = $"-{count}a";
-                int secondIndexElement = int.Parse(firstIndexElement);
-                numbers.Insert(middleIndex+1, secondIndexElement);
-                numbers.Insert(middleIndex+2, secondIndexElement);
+                string newSymbol = $"-{movesCount}a";
+
+                // new array with two symbols
+                List<string> newElements = new List<string>() { newSymbol, newSymbol };
+
+                int middleIndex = sequence.Count / 2;
+                sequence.InsertRange(middleIndex, newElements);
 
                 Console.WriteLine("Invalid input! Adding additional elements to the board");
             }
-            input = Console.ReadLine().Split().ToList();
-            index = input[0];
+            // two matching elements
+            else
+            {
+                if (sequence[firstIndex] == sequence[secondIndex])
+                {
+                    Console.WriteLine($"Congrats! You have found matching elements - ${sequence[firstIndex]}!");
+
+                    if (secondIndex > firstIndex)
+                    {
+                        sequence.RemoveAt(secondIndex);
+                        sequence.RemoveAt(firstIndex);
+                    }
+                    else
+                    {
+                        sequence.RemoveAt(firstIndex);
+                        sequence.RemoveAt(secondIndex);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Try again!");
+                }
+            }
+
+
+            if (movesCount == sequence.Count / 2)
+            {
+                Console.WriteLine($"You have won in {movesCount} turns!");
+                break;
+            }
         }
+
+
+        Console.WriteLine("Sorry you lose :(");
+        Console.WriteLine(string.Join(" ", sequence));
+
     }
 
- static bool CheckIndexes(List<int> numbers, int firstIndex, int secondIndex)
+    static bool CheckIndexes(List<string> sequence, int firstIndex, int secondIndex)
     {
-        return firstIndex == secondIndex || (firstIndex < 0 || firstIndex >= numbers.Count) ||
-                        (secondIndex < 0 || secondIndex >= numbers.Count);
+        return firstIndex == secondIndex || (firstIndex < 0 || firstIndex >= sequence.Count) ||
+                        (secondIndex < 0 || secondIndex >= sequence.Count);
     }
 }
