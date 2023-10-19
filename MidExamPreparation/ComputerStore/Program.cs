@@ -4,41 +4,49 @@
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-
-            double totalPriceWithTaxes = 0;
-            double totalPrice = 0;
-            double taxes = 0;
-
-            while (input != "special" && input != "regular")
+            decimal totalPrice = 0;
+            string input;
+            while (true)
             {
-                double price = double.Parse(input);
+                input = Console.ReadLine();
+                if (input == "special" || input == "regular")
+                {
+                    break;
+                }
+
+                decimal price = decimal.Parse(input);
 
                 if (price < 0)
                 {
                     Console.WriteLine("Invalid price!");
-                }
-                else if (price == 0)
-                {
-                    Console.WriteLine("Invalid order!");
-                }
-                else
-                {
-                    totalPrice += price;
-                    taxes = totalPrice * 0.2;
-                    totalPriceWithTaxes = totalPrice + taxes;
+                    continue;
                 }
 
-                input = Console.ReadLine();
+                totalPrice += price;
+                //decimal tax = priceWithTaxes - price;
             }
 
-            if (input == "special")
+            if (totalPrice == 0)
             {
-                totalPriceWithTaxes = totalPriceWithTaxes * 0.9;
+                Console.WriteLine("Invalid order!");
             }
+            else
+            {
+                decimal taxes = (totalPrice * (20m / 100m));
 
-            Console.WriteLine($"Congratulations you've just bought a new computer!\r\nPrice without taxes: {totalPrice:f2}$\r\nTaxes: {taxes:f2}$\r\n-----------\r\nTotal price: {totalPriceWithTaxes:f2}$");
+                Console.WriteLine("Congratulations you've just bought a new computer!");
+                Console.WriteLine($"Price without taxes: {totalPrice:F2}$");
+                Console.WriteLine($"Taxes: {taxes:F2}$");
+                Console.WriteLine("-----------");
 
+                decimal totalPriceWithTaxes = totalPrice + taxes;
+                if (input == "special")
+                {
+                    totalPriceWithTaxes -= (totalPriceWithTaxes * 10m) / 100m;
+                }
+
+                Console.WriteLine($"Total price: {totalPriceWithTaxes:F2}$");
+            }
         }
     }
 }
