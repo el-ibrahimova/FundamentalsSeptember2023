@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.TheLift", "02.TheLift\02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MovingTarget", "03.MovingTarget\03.MovingTarget.csproj", "{B4F75A6F-AE18-430A-9779-4A453C8504C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MemoryGame", "03.MemoryGame\03.MemoryGame.csproj", "{6C073652-26B8-47D1-8750-ECA881E7784B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MemoryGame", "03.MemoryGame\03.MemoryGame.csproj", "{6C073652-26B8-47D1-8750-ECA881E7784B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BonusScoringSystem", "01.BonusScoringSystem\01.BonusScoringSystem.csproj", "{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{6C073652-26B8-47D1-8750-ECA881E7784B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C073652-26B8-47D1-8750-ECA881E7784B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C073652-26B8-47D1-8750-ECA881E7784B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
