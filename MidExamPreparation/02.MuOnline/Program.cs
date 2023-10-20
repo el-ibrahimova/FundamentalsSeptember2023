@@ -6,7 +6,7 @@
              .Split("|", StringSplitOptions.RemoveEmptyEntries)
              .ToList();
 
-        bool notDead = true;
+        bool  isNotDead= true;
         bool isMaxBitcoin = false;
 
        
@@ -57,26 +57,24 @@
             else
             {
                 health -= value;
-                if (health <0 )
+                if (health > 0)
+                {
+                    Console.WriteLine($"You slayed {command}.");
+                }
+                else
                 {
                     Console.WriteLine($"You died! Killed by {command}.");
                     if (true)
                     { isMaxBitcoin = true;
                         Console.WriteLine($"Best room: {i+1}");
                     }
-                    notDead = false;  
+                    isNotDead = false;  
                     break;
-                    
-                }
-                else
-                {
-                    Console.WriteLine($"You slayed {command}.");
                 }
               
-            }
-
-           
-        } if (notDead)
+            }            
+        }
+        if (isNotDead)
             {
                 Console.WriteLine($"You've made it!");
                 Console.WriteLine($"Bitcoins: {bitcoin}");
