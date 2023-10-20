@@ -6,9 +6,10 @@
              .Split("|", StringSplitOptions.RemoveEmptyEntries)
              .ToList();
 
-        bool isFinished = false;
+        bool notDead = true;
         bool isMaxBitcoin = false;
 
+       
         int health = 100;
         int bitcoin = 0;
         int maxBitCoin = 0;
@@ -31,11 +32,11 @@
             if (command == "potion")
             {
                 if (health < 100)
-                {
+                {int currentHealth = health;
                     health += value;
                     if (health > 100)
                     {
-                        value = health - 100;
+                        value = 100-currentHealth;
                         health = 100;
                         
                     }
@@ -56,28 +57,30 @@
             else
             {
                 health -= value;
-                if (health > 0)
-                {
-                    Console.WriteLine($"You slayed {command}.");
-                }
-                else
+                if (health <0 )
                 {
                     Console.WriteLine($"You died! Killed by {command}.");
                     if (true)
                     { isMaxBitcoin = true;
-                        Console.WriteLine($"Best room: {i}");
+                        Console.WriteLine($"Best room: {i+1}");
                     }
-                    
+                    notDead = false;  
                     break;
+                    
                 }
+                else
+                {
+                    Console.WriteLine($"You slayed {command}.");
+                }
+              
             }
 
-            if (isFinished == true)
+           
+        } if (notDead)
             {
                 Console.WriteLine($"You've made it!");
                 Console.WriteLine($"Bitcoins: {bitcoin}");
                 Console.WriteLine($"Health: {health}");
             }
-        }
     }
 }
