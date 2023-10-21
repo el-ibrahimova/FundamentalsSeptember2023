@@ -10,18 +10,18 @@
 
             double totalPlunder = 0;
 
-            for (int i = 1; i < days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 totalPlunder += dailyPlunder;
 
-                if (days % 3 == 0)
+                if (i % 3 == 0)
                 {
                     totalPlunder += dailyPlunder * 0.5;
                 }
 
-                if (days % 5 == 0)
+                if (i % 5 == 0)
                 {
-                    totalPlunder -= totalPlunder * 0.7;
+                   totalPlunder = 0.7 * totalPlunder;
                 }
             }
 
@@ -31,7 +31,8 @@
             }
             else
             {
-                Console.WriteLine($"Collected only {(totalPlunder/expectedPlunder):f2}% of the plunder.");
+                double percentage = (100* totalPlunder)/expectedPlunder;
+                Console.WriteLine($"Collected only {percentage:f2}% of the plunder.");
             }
         }
     }
