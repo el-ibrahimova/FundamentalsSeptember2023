@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Security.Cryptography.X509Certificates;
 
 namespace _02.TreasureHunt
 {
@@ -40,40 +41,41 @@ namespace _02.TreasureHunt
                 }
                 else if (input == "Steal")
                 {
+                    List<string> stolenItems = new List<string>();
                     int count = int.Parse(commands[1]);
-                    int indexStolen = treasureChest.Count - count;
-                    
-                    List <string> stolenItems = new List<string>();
-                    
-                    for (int i = indexStolen; i <= treasureChest.Count; )
-                    {   
-                        stolenItems.Add(treasureChest[indexStolen]);
-                        treasureChest.RemoveAt(indexStolen);          
+                    count = Math.Min(treasureChest.Count, count);
+
+                    for (int i = treasureChest.Count - count; i < treasureChest.Count; i++)
+                    {
+                        stolenItems.Add(treasureChest[i]);
                     }
                     Console.WriteLine(string.Join(", ", stolenItems));
+
+                    treasureChest.RemoveRange(treasureChest.Count - count, count);
+
                 }
 
-                commands = Console.ReadLine().Split().ToList();
-                input = commands[0];
-            }
+                    commands = Console.ReadLine().Split().ToList();
+                    input = commands[0];
+                }
 
-            double average = 0;
-            for (int i = 0; i < treasureChest.Count; i++)
-            {
-                average += treasureChest[i].Length;
-            }
+                double average = 0;
+                for (int i = 0; i < treasureChest.Count; i++)
+                {
+                    average += treasureChest[i].Length;
+                }
 
-            if (average == 0)
-            {
-                Console.WriteLine("Failed treasure hunt.");
-            }
-            else
-            {
-                double averageGain = average / treasureChest.Count;
-                Console.WriteLine($"Average treasure gain: {averageGain:f2} pirate credits.");
-            }
-            
+                if (average == 0)
+                {
+                    Console.WriteLine("Failed treasure hunt.");
+                }
+                else
+                {
+                    double averageGain = average / treasureChest.Count;
+                    Console.WriteLine($"Average treasure gain: {averageGain:f2} pirate credits.");
+                }
 
+
+            }
         }
     }
-}
