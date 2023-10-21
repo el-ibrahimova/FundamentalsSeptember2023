@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MovingTarget", "03.Movin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.MemoryGame", "03.MemoryGame\03.MemoryGame.csproj", "{6C073652-26B8-47D1-8750-ECA881E7784B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.BonusScoringSystem", "01.BonusScoringSystem\01.BonusScoringSystem.csproj", "{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.BonusScoringSystem", "01.BonusScoringSystem\01.BonusScoringSystem.csproj", "{CEB707DD-FC18-4235-B99F-3FFACD0F95D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MuOnline", "02.MuOnline\02.MuOnline.csproj", "{E02643E2-4DE4-443D-9354-E0CA22B0670D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.MuOnline", "02.MuOnline\02.MuOnline.csproj", "{E02643E2-4DE4-443D-9354-E0CA22B0670D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Inventory", "03.Inventory\03.Inventory.csproj", "{1DB4B0D3-086D-46B5-ACD8-7AED15DBEF7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{E02643E2-4DE4-443D-9354-E0CA22B0670D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02643E2-4DE4-443D-9354-E0CA22B0670D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02643E2-4DE4-443D-9354-E0CA22B0670D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB4B0D3-086D-46B5-ACD8-7AED15DBEF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB4B0D3-086D-46B5-ACD8-7AED15DBEF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB4B0D3-086D-46B5-ACD8-7AED15DBEF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB4B0D3-086D-46B5-ACD8-7AED15DBEF7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
