@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 
 namespace _02.TreasureHunt
@@ -43,19 +44,21 @@ namespace _02.TreasureHunt
                 {
                     List<string> stolenItems = new List<string>();
                     int count = int.Parse(commands[1]);
-                    count = Math.Min(treasureChest.Count, count);
+                    count = Math.Min(treasureChest.Count, count); // ако count е по-голямо от елементите в листа, решението ще изгърми
+                   
 
-                    for (int i = treasureChest.Count - count; i < treasureChest.Count; i++)
+                    int indexStolen = treasureChest.Count - count;
+
+                    for (int i = indexStolen; i < treasureChest.Count; i++)
                     {
                         stolenItems.Add(treasureChest[i]);
                     }
                     Console.WriteLine(string.Join(", ", stolenItems));
 
-                    treasureChest.RemoveRange(treasureChest.Count - count, count);
-
+                    treasureChest.RemoveRange(indexStolen, count);
                 }
 
-                    commands = Console.ReadLine().Split().ToList();
+                commands = Console.ReadLine().Split().ToList();
                     input = commands[0];
                 }
 
