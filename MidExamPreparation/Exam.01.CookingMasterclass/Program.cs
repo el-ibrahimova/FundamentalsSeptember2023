@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            double budget = double.Parse(Console.ReadLine());
+            float budget = float.Parse(Console.ReadLine());
             int students = int.Parse(Console.ReadLine());
-            double flourPrice = double.Parse(Console.ReadLine());
-            double eggPrice = double.Parse(Console.ReadLine());
-            double apronPrice = double.Parse(Console.ReadLine());
+            float flourPrice = float.Parse(Console.ReadLine());
+            float eggPrice = float.Parse(Console.ReadLine());
+            float apronPrice = float.Parse(Console.ReadLine());
 
-            double totalCost = 0;
+            float totalCost = 0;
             int freePackage = 0;
           
             for (int i = 1; i <= students; i++)
@@ -20,11 +20,11 @@
                     freePackage++;
                 }
             }
-            apronPrice = apronPrice* students * 1.2;
-            eggPrice = eggPrice * 10 * (students);
-            flourPrice = flourPrice * (students - freePackage);
+            float totalApronPrice = (float)Math.Ceiling(students*1.2)*apronPrice;
+            float totalEggPrice = eggPrice * 10 * (students);
+            float totalFlourPrice = flourPrice * (students - freePackage);
 
-                totalCost =Math.Ceiling(apronPrice) + eggPrice + flourPrice;
+                totalCost =totalApronPrice + totalEggPrice + totalFlourPrice;
 
             if (budget >= totalCost )
             {
