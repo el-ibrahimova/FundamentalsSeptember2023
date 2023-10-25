@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int n = int.Parse(Console.ReadLine());
+
+            int factoriel = 1;
+
+            for (int i = n; i >= 2; i--)
+            {
+                factoriel *= i;
+            }
+
+            Console.WriteLine(factoriel);
         }
     }
 }
