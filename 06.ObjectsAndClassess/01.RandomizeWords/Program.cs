@@ -17,8 +17,14 @@
                 string currentWord = words[i];
                 string randomWord = words[randomIndex];
 
-                
-                Console.WriteLine(words[randomIndex]);
+                words[i] = randomWord;
+                words[randomIndex] = currentWord;
+
+            }
+
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
             }
         }
     }
