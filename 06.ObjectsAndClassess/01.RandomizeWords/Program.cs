@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            string[] words = "Welcome to SoftUni and have fun learning programming"
+            string[] words = Console.ReadLine()
                 .Split()
                 .ToArray();
 
