@@ -1,79 +1,53 @@
-﻿namespace _03.Songs
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace _03.Songs
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
+            // {Song("",name,1), Song("", name 1 ...)}
 
-            List<Song> playlist = new List<Song>();
+            List<Song> songs = new List<Song>();
 
-            
-            for (int i = 0; i < n; i++)
+            for (int i = 0; n < ; i++)
             {
-                string[] lineTokens = Console.ReadLine().Split("_");
-                string listType = lineTokens[0];
-                string songName = lineTokens[1];
-                string songTime = lineTokens[2];
+                string[] currentInput = Console.ReadLine().Split("_");
 
-                //  Song song = new Song
-                //  {                           Първи начин - с къдрави скоби
-                //    Name = songName,
-                //    TypeList =listType,
-                //    Time = songTime
-                //  };
+                string typeList = currentInput[0];
+                string name = currentInput[1];
+                string time = currentInput[2];
 
-
-                //  Song song = new Song();       Втори начин - с property    
-                //  song.Name = songName;
-                //   song.TypeList = listType;
-                //   song.Time = songTime;
-
-
-                // трети начин - с конструктор
-                Song song = new Song(listType, songName, songTime);
-                playlist.Add(song);
-                
+                Song song = new Song(typeList, name, time); // създаваме обекта 
+                songs.Add(song);
             }
 
-            string filter = Console.ReadLine();
-
-            if (filter != "all")
+            for (int i = 0; i < songs.Count; i++)
             {
-
-                for (int i = 0; i < playlist.Count; i++)
-                {
-                    Song currentSong = playlist[i];
-
-
-                }
+                Console.WriteLine(songs[i];
             }
 
-            foreach (Song song in playlist)
-            {
-                Console.WriteLine(song.Name);
-            }
+
+           //  string list = Console.ReadLine(); // "all" или TypeList - по условие
+
+
         }
+    }
 
-        public class Song
+    public class Song
+    {
+        public Song(string typeList, string name, string time)
         {
-
-            public Song()
-            { 
-            
-            }
-
-            public Song(string typeList, string name, string time)
-            {
-                TypeList = typeList;
-                Name = name;
-                Time = time;
-            }
-
-            public string TypeList { get; set; }
-
-            public string Name { get; set; }
-            public string Time { get; set; }
+            TypeList = typeList;
+            Name = name;
+            Time = time;
         }
+
+
+        public string TypeList { get; set; }
+
+        public string Name { get; set; }
+        public string Time { get; set; }
     }
 }
