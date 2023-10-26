@@ -1,4 +1,10 @@
-﻿namespace _02.BigFactorial
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Numerics;
+
+
+namespace _02.BigFactorial
 {
     internal class Program
     {
@@ -6,11 +12,11 @@
         {
             int n = int.Parse(Console.ReadLine());
 
-            int factoriel = 1;
+            BigInteger factoriel = 1;
 
             for (int i = n; i >= 2; i--)
             {
-                factoriel *= i;
+                factoriel *=(BigInteger)i;
             }
 
             Console.WriteLine(factoriel);
