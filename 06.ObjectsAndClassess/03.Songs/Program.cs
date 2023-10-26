@@ -11,7 +11,7 @@ namespace _03.Songs
 
             List<Song> songs = new List<Song>();
 
-            for (int i = 0; n < ; i++)
+            for (int i = 0; i <n ; i++)
             {
                 string[] currentInput = Console.ReadLine().Split("_");
 
@@ -22,14 +22,30 @@ namespace _03.Songs
                 Song song = new Song(typeList, name, time); // създаваме обекта 
                 songs.Add(song);
             }
-
+           
+            string list = Console.ReadLine(); // "all" или TypeList - по условие
+         
             for (int i = 0; i < songs.Count; i++)
-            {
-                Console.WriteLine(songs[i];
+            { 
+                Song currentSong = (songs[i]);
+
+                if (list == "all")
+                {
+                    Console.WriteLine(currentSong.Name);
+                }
+                else if (list == currentSong.TypeList)
+                {
+                    Console.WriteLine(currentSong.Name);
+                }
+                
+               
+                
+                Console.WriteLine(currentSong.TypeList);
+
             }
 
 
-           //  string list = Console.ReadLine(); // "all" или TypeList - по условие
+            
 
 
         }
