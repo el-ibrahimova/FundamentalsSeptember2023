@@ -37,17 +37,7 @@ namespace _03.Songs
                 {
                     Console.WriteLine(currentSong.Name);
                 }
-                
-               
-                
-                Console.WriteLine(currentSong.TypeList);
-
             }
-
-
-            
-
-
         }
     }
 
@@ -59,7 +49,6 @@ namespace _03.Songs
             Name = name;
             Time = time;
         }
-
 
         public string TypeList { get; set; }
 
