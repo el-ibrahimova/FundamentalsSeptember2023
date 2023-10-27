@@ -21,7 +21,7 @@
                     Truck truck = new Truck(brand, model, value);
                     catalog.Trucks.Add(truck);
                 }
-                else 
+                else
                 {
                     Car car = new Car(brand, model, value);
                     catalog.Cars.Add(car);
@@ -30,17 +30,37 @@
                 input = Console.ReadLine();
             }
 
-            foreach (var car in catalog.Cars
-                .OrderBy(x=>x.Brand))    // сортираме колите по техния бранд
-            { 
-            
+            if (catalog.Cars.Count > 0)
+            {
+                Console.WriteLine("Cars:");
+                foreach (var car in catalog.Cars
+                    .OrderBy(x => x.Brand))    // сортираме колите по техния бранд
+                {
+                    Console.WriteLine($"{car.Brand}: {car.Model} - {car.HorsePower}hp");
+                }
             }
 
-            foreach (var truck in catalog.Trucks)
-            { 
-            
+            if (catalog.Trucks.Count > 0)
+            {
+                Console.WriteLine("Trucks:");
+                foreach (var truck in catalog.Trucks
+                    .OrderBy(x => x.Brand))
+                {
+                    Console.WriteLine($"{truck.Brand}: {truck.Model} - {truck.Weight}kg");
+                }
             }
         }
+    }
+    public class Catalog
+    {
+        public Catalog()
+        {
+            Cars = new List<Car>();
+            Trucks = new List<Truck>();
+        }
+        public List<Car> Cars { get; set; }
+
+        public List<Truck> Trucks { get; set; }
     }
 
     public class Truck
@@ -54,14 +74,6 @@
         public string Brand { get; set; }
         public string Model { get; set; }
         public int Weight { get; set; }
-
-    }
-
-    public class Catalog
-    { 
-    public List<Car> Cars { get; set; }
-    
-    public List<Truck> Trucks { get; set; }
     }
 
     public class Car

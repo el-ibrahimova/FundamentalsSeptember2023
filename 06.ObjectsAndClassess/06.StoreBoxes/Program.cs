@@ -27,23 +27,20 @@
 
             foreach (var box in boxes.OrderByDescending(x => x.PricePerBox))
             {
-                Console.WriteLine($"{box.SerialNumber} ");
-                Console.WriteLine($"-- {box.Item.Name} – ${box.Item.Price}: {box.Quantity}");
+                Console.WriteLine($"{box.SerialNumber}");
+                Console.WriteLine($"-- {box.Item.Name} - ${box.Item.Price:f2}: {box.Quantity}");
                 Console.WriteLine($"-- ${ box.PricePerBox:f2}");
             }
-
         }
     }
 
     public class Box
     {
-
         public Box(string serialNumber, Item item, int quantity)
         {
             SerialNumber = serialNumber;
             Item = item;
             Quantity = quantity;
-        
         }
         public string SerialNumber { get; set; }
 
