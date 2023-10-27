@@ -31,13 +31,9 @@
                 {
                     Console.WriteLine($"{currentStudent.FirstName} {currentStudent.LastName} is {currentStudent.Age} years old.");
                 }
-            
             }
-
         }
-
     }
-
 
     public class Student
     {
@@ -47,7 +43,6 @@
             LastName = lastName;
             Age = age;
             Town = town;
-
         }
             
         public string FirstName { get; set; }   
