@@ -1,16 +1,18 @@
 ﻿namespace _04.Students
 {
-  class Student
-    { 
-    
-    public string FirstName {  get; set; }
-    public string LastName { get; set; }
-    public float Grade { get; set; }
-}
-    
-    
-    
-    
+    class Student
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public float Grade { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}: {Grade:f2}";
+        }
+    }
+
+
     internal class Program
     {
         static void Main(string[] args)
@@ -23,7 +25,7 @@
                 string[] studentArgs = Console.ReadLine()
                      .Split()
                      .ToArray();
-                
+
                 Student student = new Student();
 
                 student.FirstName = studentArgs[0];
@@ -33,7 +35,11 @@
                 students.Add(student);
             }
 
-            students = students.OrderByDescending(student => student.Grade).ToList();
+            List<Student> orderedStudents = students
+                                            .OrderByDescending(student => student.Grade)
+                                            .ToList();
+
+            Console.WriteLine(string.Join("\n", orderedStudents));
 
         }
     }
