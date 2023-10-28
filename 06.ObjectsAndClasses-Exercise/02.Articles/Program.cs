@@ -35,7 +35,6 @@
             return $"{Title} - {Content}: {Author}";
         }
 
-
     }
     internal class Program
     {
