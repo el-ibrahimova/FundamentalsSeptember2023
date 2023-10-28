@@ -48,7 +48,7 @@
             Console.WriteLine(string.Join("\n" , articles);  
 
             // \n == new line
-
+            // Environment.NewLine == new line
         }
     }
 }
