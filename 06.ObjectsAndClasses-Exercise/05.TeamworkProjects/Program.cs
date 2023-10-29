@@ -6,18 +6,19 @@
         {
             Name = teamName;
             Creator = creatorName;
+            Members = new List<string>();
         }
 
-        public string Name { set; get; }
+        public string Name { get; set; }
 
-        public string Creator { set; get; }
-        public List<string> Members { set; get; }
+        public string Creator { get; set; }
+        public List<string> Members { get; set; }
 
         public override string ToString()
         {
-            return $"{Name}/n" +
-                $"- {Creator}\n" +
-                $"{GetMembersString()}";
+            return $"{Name}\n" +
+                   $"- {Creator}\n" +
+                   $"{GetMembersString()}";
         }
 
         public string GetMembersString()
@@ -33,7 +34,7 @@
                 result += $"-- {Members[i]}\n";
             }
 
-            result +=$"-- {Members[Members.Count-1]}"
+            result += $"-- {Members[Members.Count - 1]}";
             
             return result;
         }
@@ -51,10 +52,7 @@
             for (int i = 0; i < n; i++)
             {
                 string[] teamCommands = Console.ReadLine().Split("-");
-                string teamName = teamCommands[1];
-                string creatorName = teamCommands[0];
-
-                Team team = new Team(teamName, creatorName);
+                Team team = new Team(teamCommands[1], teamCommands[0]); // създаваме обект Отбор
 
 
                 Team sameTeamFound = teams.Find(t => t.Name == team.Name); // проверяваме дали вече има създаден отбор със същото име
@@ -66,7 +64,7 @@
                 }
 
               
-                Team sameCreatorFound = teams.Find(t => t.Creator == creatorName); // проверяваме дали създателят на този отбор не е създал преди това и друг отбор
+                Team sameCreatorFound = teams.Find(t => t.Creator == team.Creator); // проверяваме дали създателят на този отбор не е създал преди това и друг отбор
               
                 if (sameCreatorFound != null)
                 {
@@ -75,8 +73,55 @@
                 }
 
                 teams.Add(team);
+                Console.WriteLine($"Team {team.Name} has been created by {team.Creator}!");
+
             }
 
+            string command;
+            while ((command = Console.ReadLine()) != "end of assignment")
+            {
+                string[] arguments = command.Split("->");
+
+                string joinerName = arguments[0];
+                string teamName = arguments[1];
+
+                bool hasAnyTeamWithSameName = teams.Any(t => t.Name == teamName);
+                //има ли поне един отбор, който е еднакъв с този, който са ни дали от конзолата
+
+                if (hasAnyTeamWithSameName == false)
+                {
+                    Console.WriteLine($"Team {teamName} does not exist!");
+                    continue;
+                }
+
+                // търсим дали има един човек в два отбора, като създател или член
+                if (teams.Any(team => team.Creator == joinerName) ||
+                   (teams.Any(team => team.Members.Contains(joinerName))))
+                {
+                    Console.WriteLine($"Member {joinerName} cannot join team {teamName}!");
+                    continue;
+                }
+
+                //  след всички проверки,и ако той е валиден, добавяме човека в отбора, към който иска да се присъедини
+
+                 teams.Find(t => t.Name == teamName).Members.Add(joinerName);
+            }
+
+            List<Team> leftTeams = teams.Where(t => t.Members.Count > 0).ToList();
+
+            List<Team> orderedTeams = leftTeams
+                .OrderByDescending(t => t.Members.Count)
+                .ThenBy(t => t.Name)
+                .ToList();
+
+            orderedTeams.ForEach(team => Console.WriteLine(team));
+
+          
+            List<Team> disbandTeams = teams.Where(t => t.Members.Count == 0).ToList();
+            Console.WriteLine("Teams to disband:");
+
+            orderedTeams = disbandTeams.OrderBy(x => x.Name).ToList();
+            orderedTeams.ForEach(team => Console.WriteLine(team.Name));
         }
     }
 }
