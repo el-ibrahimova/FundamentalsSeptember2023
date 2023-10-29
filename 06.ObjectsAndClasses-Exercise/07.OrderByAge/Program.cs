@@ -17,7 +17,7 @@ namespace _07.OrderByAge
 
         public override string ToString()
         {
-            return $"{Name} with ID:{ID} is {Age} years old.";
+            return $"{Name} with ID: {ID} is {Age} years old.";
         }
     }
     
