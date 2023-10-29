@@ -3,8 +3,6 @@ using System.Xml.Linq;
 
 namespace _06.VehicleCatalogue
 {
-
-
     class Vehicle
     {
         public Vehicle(string type, string model, string color, string horsePower)
@@ -101,6 +99,5 @@ namespace _06.VehicleCatalogue
             }
         }
     }
-
 }
 
