@@ -7,7 +7,11 @@
         public double FuelAmount { get; set; }
         public double FuelConsPerKm { get; set; }
         public double TraveledDistance { get; set; }
-    }
+
+        public override string ToString()
+        {
+            return $"{Model} {FuelAmount:f2} {TraveledDistance}";
+        }
 
 
     internal class Program
@@ -30,10 +34,20 @@
                 car.FuelConsPerKm = double.Parse(carInfo[2]);
                 car.TraveledDistance = 0;
 
-
-
-
+                cars.Add(car);
             }
+
+            string command;
+            while ((command = Console.ReadLine()) != "End")
+            {
+                string[] carCommand = command.Split();
+                string drive = "Drive";
+                string model = carCommand[1];
+                double amountKm = double.Parse(carCommand[2]);
+                    cars.Find(x => x.Model == carInfo[0].Move(decimal.Parse(carInfo[2]));
+                }
+
+            
         }
     }
 }

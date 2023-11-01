@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CompanyRoster", "01.CompanyRoster\01.CompanyRoster.csproj", "{D4CDD77D-D911-4FE8-AE25-2D3B25ABFBDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.CompanyRoster", "01.CompanyRoster\01.CompanyRoster.csproj", "{D4CDD77D-D911-4FE8-AE25-2D3B25ABFBDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.OldestFamilyMember", "02.OldestFamilyMember\02.OldestFamilyMember.csproj", "{12547C4D-F797-4912-AE81-F4E909B16461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.OldestFamilyMember", "02.OldestFamilyMember\02.OldestFamilyMember.csproj", "{12547C4D-F797-4912-AE81-F4E909B16461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SpeedRacing", "03.SpeedRacing\03.SpeedRacing.csproj", "{F99962B4-25F5-4F9C-BCAE-375F47928B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{12547C4D-F797-4912-AE81-F4E909B16461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12547C4D-F797-4912-AE81-F4E909B16461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12547C4D-F797-4912-AE81-F4E909B16461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99962B4-25F5-4F9C-BCAE-375F47928B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99962B4-25F5-4F9C-BCAE-375F47928B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99962B4-25F5-4F9C-BCAE-375F47928B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99962B4-25F5-4F9C-BCAE-375F47928B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
