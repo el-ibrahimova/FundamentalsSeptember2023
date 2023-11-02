@@ -13,7 +13,6 @@
             {
                 Console.WriteLine(word);
             }
-
            
             // може да се запише и по-кратко
 
@@ -22,8 +21,6 @@
             //   .Where(x => x.Length % 2 == 0)
             //   .ToList()
             //   .ForEach(Console.WriteLine) ;  // този ForEach работи само за листове
-
-
         }
     }
 }

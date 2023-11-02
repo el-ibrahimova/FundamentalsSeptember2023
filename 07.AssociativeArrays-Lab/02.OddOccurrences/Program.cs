@@ -14,7 +14,7 @@
                 string wordToLower = word.ToLower();
 
                 if (!allWords.ContainsKey(wordToLower))
-                        {
+                {
                     allWords.Add(wordToLower, 0);
                 }
                 allWords[wordToLower]++;
