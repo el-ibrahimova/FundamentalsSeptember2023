@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.WordSynonyms", "03.WordS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.1.WordSynonyms", "03.1.WordSynonyms\03.1.WordSynonyms.csproj", "{2618D382-E724-47C4-8945-0280297CE34B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.WordFilter", "04.WordFilter\04.WordFilter.csproj", "{4D803841-2150-414E-8BB7-10935A9C2D02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2618D382-E724-47C4-8945-0280297CE34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2618D382-E724-47C4-8945-0280297CE34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2618D382-E724-47C4-8945-0280297CE34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D803841-2150-414E-8BB7-10935A9C2D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D803841-2150-414E-8BB7-10935A9C2D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D803841-2150-414E-8BB7-10935A9C2D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D803841-2150-414E-8BB7-10935A9C2D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
