@@ -21,7 +21,7 @@
             //   .Split()
             //   .Where(x => x.Length % 2 == 0)
             //   .ToList()
-            //   .ForEach(Console.WriteLine) ;
+            //   .ForEach(Console.WriteLine) ;  // този ForEach работи само за листове
 
 
         }
