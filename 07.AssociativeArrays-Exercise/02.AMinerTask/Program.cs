@@ -21,7 +21,7 @@
 
             foreach (KeyValuePair<string, uint> resourcePair in resourceMap)
             {
-                Console.WriteLine($"{resourcePair.Key} –> {resourcePair.Value}");
+                Console.WriteLine($"{resourcePair.Key} -> {resourcePair.Value}");
             }
         }
     }
