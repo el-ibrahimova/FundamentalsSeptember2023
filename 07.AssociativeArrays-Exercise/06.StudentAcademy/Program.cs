@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return $"{Name} –> {Grades.Average():f2}";
+            return $"{Name} -> {Grades.Average():f2}";
         }
     }
 
