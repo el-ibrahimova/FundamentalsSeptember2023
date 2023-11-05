@@ -16,7 +16,7 @@
             string result = $"{Name}: {StudentNames.Count}\n";
             for (int i = 0; i < StudentNames.Count; i++)
             {
-                result += $"--{StudentNames[i]}\n";
+                result += $"-- {StudentNames[i]}\n";
             }
 
             return result.Trim(); // премахва празни редове => след последния човек не е нужно да има нов ред
@@ -45,6 +45,7 @@
              
                 // Course foundCourse = courses[courseName];
                 // List <string> courseStudents = foundCourse.StudentNames;
+                // courseStudents.Add(studentName);
                  
                 courses[courseName].StudentNames.Add(studentName);            
             }
