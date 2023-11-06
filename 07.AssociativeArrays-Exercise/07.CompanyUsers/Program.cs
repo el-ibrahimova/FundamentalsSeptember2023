@@ -1,8 +1,4 @@
-﻿using System.Collections.Immutable;
-using System.Runtime.CompilerServices;
-using System.Xml;
-
-namespace _07.CompanyUsers
+﻿namespace _07.CompanyUsers
 {
     class Company
     {
@@ -13,7 +9,6 @@ namespace _07.CompanyUsers
         }
         public string Name { get; set; }
         public List<string> EmployeeId { get; set; }
-
         
         public override string ToString()
         {
@@ -27,16 +22,14 @@ namespace _07.CompanyUsers
             return result.Trim();
         }
 
-        public void AddEmployee(string employeeId)
+        public void AddEmployee(string employeeId) // с този метод правим проверка дали вече не съществува такова ID
         {
             if (!EmployeeId.Contains(employeeId))
             {
                 EmployeeId.Add(employeeId);
             }
         }
-
     }
-    
     internal class Program
     {
         static void Main(string[] args)
@@ -49,8 +42,6 @@ namespace _07.CompanyUsers
                 string[] arguments = input.Split(" -> ");
                 string companyName = arguments[0];
                 string employeeId = arguments[1];
-
-                
 
                 if (!companies.ContainsKey(companyName))
                 {
