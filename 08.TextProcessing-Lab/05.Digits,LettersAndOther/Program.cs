@@ -6,6 +6,13 @@ namespace _05.Digits_LettersAndOther
     {
         static void Main(string[] args)
         {
+            // Друг начин за решаване
+            // string text = Console.ReadLine();
+            //  Console.WriteLine(string.Join("", text.Where(char.IsDigit)));
+            //  Console.WriteLine(string.Join("", text.Where(char.IsLetter)));
+            // Console.WriteLine(string.Join("", text.Where(x=>!char.IsLetter(x) || !char.IsDigit(x))));  - символа не е нито буква, нито цифра
+
+
             string text = Console.ReadLine();
 
             List<string> numbers = new List<string>();
@@ -32,6 +39,7 @@ namespace _05.Digits_LettersAndOther
             Console.WriteLine(string.Join("", numbers));
             Console.WriteLine(string.Join("", letters));
             Console.WriteLine(string.Join("", symbols));
+
         }
     }
 }
