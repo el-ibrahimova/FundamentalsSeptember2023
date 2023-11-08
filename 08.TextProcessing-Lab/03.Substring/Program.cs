@@ -11,7 +11,7 @@
             {
                 int index = words.IndexOf(wordToRemove);
 
-               words = words.Remove(index, wordToRemove.Length); // презаписваме думата
+               words = words.Remove(index, wordToRemove.Length); // string не може да се променя, затова презаписваме думата
             }
             Console.WriteLine(words);
 
