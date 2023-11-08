@@ -9,9 +9,9 @@
 
             foreach (string word in words)
             {
-                int length = word.Length; // hi -> 2
+                int repeatTimes = word.Length; // hi -> 2
 
-                for (int i = 0; i < length; i++)
+                for (int i = 0; i < repeatTimes; i++) //2
                 {
                     result += word;
                 }
