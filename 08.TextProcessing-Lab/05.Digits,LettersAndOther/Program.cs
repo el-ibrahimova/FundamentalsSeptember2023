@@ -10,7 +10,7 @@ namespace _05.Digits_LettersAndOther
             // string text = Console.ReadLine();
             //  Console.WriteLine(string.Join("", text.Where(char.IsDigit)));
             //  Console.WriteLine(string.Join("", text.Where(char.IsLetter)));
-            // Console.WriteLine(string.Join("", text.Where(x=>!char.IsLetter(x) || !char.IsDigit(x))));  - символа не е нито буква, нито цифра
+            // Console.WriteLine(string.Join("", text.Where(x=>!char.IsLetter(x) && !char.IsDigit(x))));  - символа не е нито буква, нито цифра
 
 
             string text = Console.ReadLine();

@@ -16,7 +16,6 @@
                     result += word;
                 }
             }
-
             Console.WriteLine(result);
         }
     }
