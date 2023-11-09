@@ -36,7 +36,7 @@
             string input;
             while ((input = Console.ReadLine()) != "Season end")
             {
-                string[] commands = Console.ReadLine().Split("->", StringSplitOptions.RemoveEmptyEntries);
+                string[] commands = input.Split("->", StringSplitOptions.RemoveEmptyEntries);
 
                 if (commands.Length == 3) // {player} -> {position} -> {skill}
                 {
@@ -82,7 +82,7 @@
                     .OrderByDescending(x => x.Value)
                     .ThenBy(x => x.Key))
                 {
-                    Console.WriteLine($"- {position.Key} <::> {position.Value}");
+                    Console.WriteLine($"-{position.Key} <::> {position.Value}");
                 }
             }
         }
