@@ -6,8 +6,8 @@
         {
             // може да се реши и по този начин - с методите Get
             // string filePath = Console.ReadLine();
-            // Console.WriteLine($"File name: {Path.GetFileName(filePath)}");
-            // Console.WriteLine($"File extension: {Path.GetExtension(filePath)}");
+           // Console.WriteLine($"File name: {Path.GetFileNameWithoutExtension(filePath)}");
+           //  Console.WriteLine($"File extension: {Path.GetExtension(filePath).Replace(".","")}"); // заменя точката с празен стринг
 
 
             string filePath = Console.ReadLine();
