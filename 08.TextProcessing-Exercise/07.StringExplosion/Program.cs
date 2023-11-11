@@ -31,13 +31,9 @@ namespace _07.StringExplosion
                 }
                 else
                 {
-                    strength--;
+                    strength--; // пропускаме елемента от input, (който е изгърмял, в зависимост от силата на взрива) и намаляваме силата с 1
                 }
             }
-
-
-
-
 
             return resultBuilder.ToString(); // връща клас, а на нас ни трябва string => To.String()
         }
