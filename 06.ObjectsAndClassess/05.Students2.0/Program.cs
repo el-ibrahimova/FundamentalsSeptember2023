@@ -32,12 +32,20 @@
                         exist = true;
                     }
                 }
+                // друг начин, с който проверяваме дали студента вече съществува
+                // Student currentStudent = students.FirstOrDefault(x=>x.FirstName = firstName && x.LastName = lastName); 
+                // тук връща стойността на student или null, ако не съществува
+                // if (currentStudent != null)
+                //{ 
+                //currentStudent.Age = student.age;
+                //currentStudent.Town = student.Town;
+                //}
 
                 if (!exist)
                 {
                     students.Add(student);
                 }
-                
+
                 input = Console.ReadLine();
             }
 
@@ -50,6 +58,10 @@
                     Console.WriteLine($"{currentStudent.FirstName} {currentStudent.LastName} is {currentStudent.Age} years old.");
                 }
             }
+
+            // записване на output-a с LINQ
+            // Console.WriteLine(string.Join("", students.Where(x=>x.Town==desiredTown).Select(x=>$"{x.FirstName} {x.LastName} is {x.Age} years old.")));
+
         }
     }
 
