@@ -20,7 +20,7 @@ namespace _01.MatchFullName
             /*
               string input = Console.ReadLine();
               string pattern = @"\b[A-Z][a-z]+ [A-Z][a-z]+\b";
-              MatchCollection matchCollection = Regex.Matches(input, pattern);
+              MatchCollection matchCollection = Regex.Matches(input, pattern);  // да се намерят всички съвпадения на pattern  в текста input
               Console.WriteLine(string.Join(" ", matchCollection));
            */
 
