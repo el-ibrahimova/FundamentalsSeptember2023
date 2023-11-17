@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace _02.Race
@@ -58,10 +59,15 @@ namespace _02.Race
                     foundParticipant.Distance += distance;
                 }
 
-                foreach (Participant participant in participants)
-                {
-                    Console.WriteLine(participant.Distance);
             }
-        }
+            List<Participant> firstThreeParticipants = participants
+                    .OrderByDescending(p => p.Distance)
+                    .Take(3) // първите 3 елемента
+                    .ToList(); 
+
+                Console.WriteLine($"1st place: {firstThreeParticipants[0].Name}");
+                Console.WriteLine($"2nd place: {firstThreeParticipants[1].Name}");
+                Console.WriteLine($"3rd place: {firstThreeParticipants[2].Name}");
+        } 
     }
 }
