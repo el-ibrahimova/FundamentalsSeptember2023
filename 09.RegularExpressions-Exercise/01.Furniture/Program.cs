@@ -47,13 +47,7 @@ namespace _01.Furniture
                 totalCost += furniture.Total(); // от метода
             }
 
-            Console.WriteLine($"Total money spend: {totalCost}");
-
-
-
-
-
-
+            Console.WriteLine($"Total money spend: {totalCost:f2}");
         }
     }
 }
