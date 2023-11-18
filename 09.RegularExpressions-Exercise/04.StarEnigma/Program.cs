@@ -41,7 +41,7 @@ namespace _04.StarEnigma
 
                 Match match = Regex.Match(decryptedMessage, messagePattern);
 
-                if (match == null) // проверяваме дали има съвпадения
+                if (!Regex.IsMatch(decryptedMessage, messagePattern)) // проверяваме дали има съвпадения, Инициализиран е, но няма никаква информация в себе си
                 {
                     continue;      // ако няма, то продължаваме със следващия ред
                 }
@@ -56,12 +56,13 @@ namespace _04.StarEnigma
                 messages.Add(message);
             }
 
-            var planets = messages
+            var filteredMessages = messages
                 .Where(m => m.AttackType == "A")
                 .OrderBy(m => m.PlanetName)
                 .ToList();
-            Console.WriteLine($"Attacked planets:{planets.Count}");
-            planets.ForEach(m => Console.WriteLine($"-> {m.PlanetName}"));
+           
+            Console.WriteLine($"Attacked planets: {filteredMessages.Count}");
+            filteredMessages.ForEach(m => Console.WriteLine($"-> {m.PlanetName}"));
 
             // горното е кратък запис на това:
             //  foreach (Message message in planets)
@@ -69,6 +70,14 @@ namespace _04.StarEnigma
             //     Console.WriteLine($"-> {message.PlanetName}");
             // }
 
+
+            filteredMessages = messages
+                .Where(m => m.AttackType == "D")
+                .OrderBy(m => m.PlanetName)
+                .ToList();
+           
+            Console.WriteLine($"Destroyed planets: {filteredMessages.Count}");
+            filteredMessages.ForEach(m => Console.WriteLine($"-> {m.PlanetName}"));
         }
     }
 }
