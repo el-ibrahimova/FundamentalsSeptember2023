@@ -26,6 +26,8 @@ namespace _04.StarEnigma
             int messageCount = int.Parse(Console.ReadLine());
             
             string starPattern = @"[SsTtAaRr]";
+
+            string messagePattern = @"@(?<Planet>[A-Za-z]+)[^\@\-\!\:\>]*:(?<Population>\d+)[^\@\-\!\:\>]*\!(?<AtackType>A|D)\![^\@\-\!\:\>]*\-\>(?<SoldierCount>\d+)";
             
             for (int i = 0; i < messageCount; i++)
             {
@@ -38,8 +40,9 @@ namespace _04.StarEnigma
                 {
                    messageBuilder.Append((char)(encryptMessage[j] - decryptionKey));
                 }
-
+                
             }
+            
         }
     }
 }
