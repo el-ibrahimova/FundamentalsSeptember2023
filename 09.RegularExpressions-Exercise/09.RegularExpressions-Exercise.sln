@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Furniture", "01.Furniture\01.Furniture.csproj", "{77D71A5F-5046-49C1-BC4B-8B16920692F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Furniture", "01.Furniture\01.Furniture.csproj", "{77D71A5F-5046-49C1-BC4B-8B16920692F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Race", "02.Race\02.Race.csproj", "{A6BAE626-F47C-401E-A328-F5CF2DC69379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Race", "02.Race\02.Race.csproj", "{A6BAE626-F47C-401E-A328-F5CF2DC69379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.StarEnigma", "04.StarEnigma\04.StarEnigma.csproj", "{D418CAC9-C998-4899-A70B-A8795909B79C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A6BAE626-F47C-401E-A328-F5CF2DC69379}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6BAE626-F47C-401E-A328-F5CF2DC69379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6BAE626-F47C-401E-A328-F5CF2DC69379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D418CAC9-C998-4899-A70B-A8795909B79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D418CAC9-C998-4899-A70B-A8795909B79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D418CAC9-C998-4899-A70B-A8795909B79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D418CAC9-C998-4899-A70B-A8795909B79C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
