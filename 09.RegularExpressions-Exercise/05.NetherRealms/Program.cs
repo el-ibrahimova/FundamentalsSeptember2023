@@ -65,8 +65,8 @@ namespace _05.NetherRealms
         static decimal CalculateDamage(string demonName)
         {
             decimal damage = 0;
-            string wordPatternForDamage = @"(\-|\+)*\d+";
-            string wordPatternForOperations = @"\/*\**";
+            string wordPatternForDamage = @"(?:(?:[-+]*)(?:\d+\.\d+|\d+))"; // all numbers (int/float) with possible prefix +/- ";
+            string wordPatternForOperations = @"[\*\/]"; // all * or /
 
             MatchCollection matchesDamages = Regex.Matches(demonName, wordPatternForDamage);
 
