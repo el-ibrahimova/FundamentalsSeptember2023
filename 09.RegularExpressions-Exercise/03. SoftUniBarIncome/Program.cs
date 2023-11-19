@@ -24,7 +24,7 @@ namespace _03._SoftUniBarIncome
         {
             List<Order> orders = new List<Order>();
 
-            string pattern = @"\%(?<name>[A-Z][a-z]+)\%[^\|\$\%\.]*\<(?<product>\w+)\>[^\|\$\%\.]*\|(?<count>\d+)\|[^\|\$\%\.]*(?<price>\d+\.*\d+)\$";
+            string pattern = @"\%(?<name>[A-Z][a-z]+)\%[^|$%.]*\<(?<product>\w+)\>[^|$%.]*\|(?<count>\d+)\|[^|$%.]*?(?<price>\d+\.*\d+)\$";
             string input;
             while ((input = Console.ReadLine()) != "end of shift")
             {
