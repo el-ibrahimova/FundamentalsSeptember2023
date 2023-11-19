@@ -8,19 +8,19 @@ namespace _06.ExtractEmails
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            
-            string pattern = @"(?<user>[^\.\-_][a-z0-9]+(?:\.*\-*_*)[a-z0-9]+)@(?<host>[a-z]+\-*[a-z]+\.([a-z]+\.)*[a-z]+)";
 
-           MatchCollection collection = Regex.Matches(input, pattern);
+              string pattern = @"[^\.\-_]\b(?![\._\-])[A-Za-z0-9]+[\.\-_]*[A-Za-z0-9]+@[^\.\-](?:[A-Za-z\.\-]+\.)+[A-Za-z]+";
+
+           //  @"[^\.\-_]\b(?![\._\-]) [A-Za-z0-9]+  [\.\-_]*[A-Za-z0-9]+ @  [^\.\-](?:[A-Za-z\.\-]+\.)+ [A-Za-z]+";
+
+
+            MatchCollection collection = Regex.Matches(input, pattern);
+            
             
             foreach (var address in collection)
             {
-
                 Console.WriteLine(address);
             }
-
-            
-
         }
     }
 }
