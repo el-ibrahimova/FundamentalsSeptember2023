@@ -16,8 +16,6 @@ namespace _03._SoftUniBarIncome
         }
     }
 
-
-
     internal class Program
     {
         static void Main(string[] args)
@@ -37,8 +35,6 @@ namespace _03._SoftUniBarIncome
                     order.Count = int.Parse(match.Groups["count"].Value);
                     order.Price = decimal.Parse(match.Groups["price"].Value);
 
-                    
-
                     orders.Add(order);
                 }
             }
@@ -48,12 +44,10 @@ namespace _03._SoftUniBarIncome
             foreach (Order order in orders)
             {
                 decimal total = order.Total();
-                Console.WriteLine($"{order.Customer}: {order.Product} - {total:f2}.");
+                Console.WriteLine($"{order.Customer}: {order.Product} - {total:f2}");
                 totalPrice += order.Total();
             }
             Console.WriteLine($"Total income: {totalPrice:f2}");
-
-
         }
     }
 }

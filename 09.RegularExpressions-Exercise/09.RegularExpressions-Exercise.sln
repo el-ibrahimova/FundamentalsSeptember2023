@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Furniture", "01.Furnitur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Race", "02.Race\02.Race.csproj", "{A6BAE626-F47C-401E-A328-F5CF2DC69379}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.StarEnigma", "04.StarEnigma\04.StarEnigma.csproj", "{D418CAC9-C998-4899-A70B-A8795909B79C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.StarEnigma", "04.StarEnigma\04.StarEnigma.csproj", "{D418CAC9-C998-4899-A70B-A8795909B79C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. SoftUniBarIncome", "03. SoftUniBarIncome\03. SoftUniBarIncome.csproj", "{C0040408-AD70-4DC3-BF1E-936F079CCE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. SoftUniBarIncome", "03. SoftUniBarIncome\03. SoftUniBarIncome.csproj", "{C0040408-AD70-4DC3-BF1E-936F079CCE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.NetherRealms", "05.NetherRealms\05.NetherRealms.csproj", "{964D67E2-5A3F-4E92-AB2A-4C454E629A01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0040408-AD70-4DC3-BF1E-936F079CCE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0040408-AD70-4DC3-BF1E-936F079CCE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0040408-AD70-4DC3-BF1E-936F079CCE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964D67E2-5A3F-4E92-AB2A-4C454E629A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964D67E2-5A3F-4E92-AB2A-4C454E629A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964D67E2-5A3F-4E92-AB2A-4C454E629A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964D67E2-5A3F-4E92-AB2A-4C454E629A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
