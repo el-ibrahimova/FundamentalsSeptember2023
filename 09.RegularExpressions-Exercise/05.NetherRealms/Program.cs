@@ -17,7 +17,6 @@ namespace _05.NetherRealms
         public decimal Damage { get; set; }
     }
 
-
     internal class Program
     {
         static void Main(string[] args)
@@ -42,8 +41,6 @@ namespace _05.NetherRealms
             {
                 Console.WriteLine($"{demon.Name} - {demon.Health} health, {demon.Damage:F2} damage");
             }
-
-
         }
 
         static int CalculateHealth(string demonName)
@@ -59,9 +56,7 @@ namespace _05.NetherRealms
             }
 
             return health;
-
         }
-
         static decimal CalculateDamage(string demonName)
         {
             decimal damage = 0;
