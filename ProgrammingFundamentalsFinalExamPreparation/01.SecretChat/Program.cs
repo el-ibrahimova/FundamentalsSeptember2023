@@ -33,7 +33,7 @@
                     int substringIndex = secretMessage.IndexOf(substring);
                     // ако substring се съдържа във secretMessage, то ще ни върне като резултат индекса, на който се намир. Ако не - ще върне стойност -1
                     
-                    if (substringIndex < 1) 
+                    if (substringIndex == -1) 
                     {
                         Console.WriteLine("error");
                         continue;
@@ -43,6 +43,14 @@
 
                     string reversedSubstring = new string(substring.Reverse().ToArray());
                     //след Reverse метода ни се връща масив от char => пишем  new string, за да го превърнем в string
+
+
+                    // reversedSubstring може да се запише и така:
+                   // for (int i = substring.Length -(1); i >=0; i--)
+                   // {
+                   //     reversedSubstring += substring[i]; 
+                   // }
+
                     secretMessage += reversedSubstring;
                     Console.WriteLine(secretMessage);
                 }
