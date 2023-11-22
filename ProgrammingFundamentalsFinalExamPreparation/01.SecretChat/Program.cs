@@ -25,13 +25,30 @@
                     string replacement = tokens[2];
 
                     secretMessage = secretMessage.Replace(substring, replacement);
+                    Console.WriteLine(secretMessage);
                 }
                 else if (command == "Reverse")
-                { 
-                
+                {
+                    string substring = tokens[1];
+                    int substringIndex = secretMessage.IndexOf(substring);
+                    // ако substring се съдържа във secretMessage, то ще ни върне като резултат индекса, на който се намир. Ако не - ще върне стойност -1
+                    
+                    if (substringIndex < 1) 
+                    {
+                        Console.WriteLine("error");
+                        continue;
+                    }
+
+                    secretMessage = secretMessage.Remove(substringIndex, substring.Length);
+
+                    string reversedSubstring = new string(substring.Reverse().ToArray());
+                    //след Reverse метода ни се връща масив от char => пишем  new string, за да го превърнем в string
+                    secretMessage += reversedSubstring;
+                    Console.WriteLine(secretMessage);
                 }
 
             }
+            Console.WriteLine($"You have a new text message: {secretMessage}");
         }
     }
 }
