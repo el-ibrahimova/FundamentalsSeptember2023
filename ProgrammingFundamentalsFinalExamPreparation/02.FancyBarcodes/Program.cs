@@ -16,7 +16,7 @@ namespace _02.FancyBarcodes
                 string currentBarcode = Console.ReadLine();
 
                 if (Regex.IsMatch(currentBarcode, barcodePattern))
-                  {
+                {
                     // @###Brea0D@### => B r e a 0 D => 0
                     // @##Che4s6E@##  => C h e 4 s 6 E => 4 6
                     // @#FreshFisH@# => F r e s h F i s h => digits.Length = 0
@@ -38,3 +38,4 @@ namespace _02.FancyBarcodes
         }
     }
 }
+
