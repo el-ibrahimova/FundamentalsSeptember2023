@@ -31,7 +31,7 @@
                 {
                     string substring = tokens[1];
                     int substringIndex = secretMessage.IndexOf(substring);
-                    // ако substring се съдържа във secretMessage, то ще ни върне като резултат индекса, на който се намир. Ако не - ще върне стойност -1
+                    // ако substring се съдържа във secretMessage, то ще ни върне като резултат индекса, на който се намира. Ако не - ще върне стойност -1
                     
                     if (substringIndex == -1) 
                     {
