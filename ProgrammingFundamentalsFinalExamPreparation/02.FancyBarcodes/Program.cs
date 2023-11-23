@@ -8,7 +8,7 @@ namespace _02.FancyBarcodes
         {
             int count = int.Parse(Console.ReadLine());
 
-            string barcodePattern = @"@#+(?<barcode>[A-Z]{1}[A-Za-z0-9]{4,}[A-Z]{1})@#+";
+            string barcodePattern = @"@#+[A-Z]{1}[A-Za-z0-9]{4,}[A-Z]{1}@#+";
 
 
             for (int i = 0; i < count; i++)
