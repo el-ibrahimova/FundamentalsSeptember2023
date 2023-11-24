@@ -5,11 +5,13 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SecretChat", "01.SecretChat\01.SecretChat.csproj", "{B3571C80-E520-4E0C-9E13-53196968F0F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.FancyBarcodes", "02.FancyBarcodes\02.FancyBarcodes.csproj", "{2F5DCCE1-1180-4B02-8CB8-F694C34BE8E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.FancyBarcodes", "02.FancyBarcodes\02.FancyBarcodes.csproj", "{2F5DCCE1-1180-4B02-8CB8-F694C34BE8E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.01.FancyBarcodes", "02.01.FancyBarcodes\02.01.FancyBarcodes.csproj", "{6FF443C0-E5B8-4F36-A489-5365B3182FD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.01.FancyBarcodes", "02.01.FancyBarcodes\02.01.FancyBarcodes.csproj", "{6FF443C0-E5B8-4F36-A489-5365B3182FD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Pirates", "03.Pirates\03.Pirates.csproj", "{4D9E5C11-313E-44B1-8E61-798406DE69C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Pirates", "03.Pirates\03.Pirates.csproj", "{4D9E5C11-313E-44B1-8E61-798406DE69C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ActivationKeys-Exam", "01.ActivationKeys-Exam\01.ActivationKeys-Exam.csproj", "{A6D4C1DB-E80F-4D73-BF00-B0CFE752D789}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4D9E5C11-313E-44B1-8E61-798406DE69C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9E5C11-313E-44B1-8E61-798406DE69C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9E5C11-313E-44B1-8E61-798406DE69C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D4C1DB-E80F-4D73-BF00-B0CFE752D789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D4C1DB-E80F-4D73-BF00-B0CFE752D789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D4C1DB-E80F-4D73-BF00-B0CFE752D789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D4C1DB-E80F-4D73-BF00-B0CFE752D789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
