@@ -25,7 +25,7 @@
 
                 if (city is not null)
                 {
-                    city.Populaion += population;
+                    city.Population += population;
                     city.Gold += gold;
                     continue;
                 }
@@ -33,7 +33,7 @@
                 cities.Add(new City
                 {
                     Name = cityName,
-                    Populaion = population,
+                    Population = population,
                     Gold = gold
                 });
             }
