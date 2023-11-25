@@ -18,10 +18,11 @@ namespace _03.HeroesOfCodeAndLogicVII_Exercises
     }
     internal class Program
     {
+        static List<Hero> party = new List<Hero>(); //изкарвамв листа извън Main метода, за да се достъпва и в методите на програмата. Ако не решаваме задачата с методи, това няма да е нужно
+       
         static void Main(string[] args)
         {
-            List<Hero> party = new List<Hero>();
-
+          
             int countOfHeroes = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfHeroes; i++)
@@ -94,7 +95,7 @@ namespace _03.HeroesOfCodeAndLogicVII_Exercises
             throw new NotImplementedException();
         }
         
-        private static void Heal(string heroName, int amount)
+        static void Heal(string heroName, int amount)
         {
             throw new NotImplementedException();
         }
