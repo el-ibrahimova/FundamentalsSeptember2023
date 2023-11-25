@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Text;
+using System.Threading.Channels;
 
 namespace _03.HeroesOfCodeAndLogicVII_Exercises
 {
@@ -7,22 +9,49 @@ namespace _03.HeroesOfCodeAndLogicVII_Exercises
         public Hero(string name, int hP, int mP)
         {
             Name = name;
-            HP = hP;
-            MP = mP;
+            Heal(hP);   // Може и само hP, но след като имаме създадените методи, може да ги използваме
+            Recharge(mP);   // може и само mP
         }
 
         public string Name { get; set; }
         public int HP { get; set; }
         public int MP { get; set; }
 
+        public int Recharge(int amountMP)
+        {
+            int recoveredMP = Math.Min(amountMP, 200 - MP);
+            MP += recoveredMP;
+
+            return recoveredMP;
+        }
+
+        public int Heal(int amountHP)
+        {
+            int recoveredHP = Math.Min(amountHP, 100 - HP);
+            HP += recoveredHP;
+
+            return recoveredHP;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder heroBuilder = new StringBuilder();
+            heroBuilder.AppendLine(Name);
+            heroBuilder.AppendLine($"  HP: {HP}");
+            heroBuilder.AppendLine($"  MP: {MP}");
+
+            return heroBuilder.ToString();
+
+        }
     }
     internal class Program
     {
-        static List<Hero> party = new List<Hero>(); //изкарвамв листа извън Main метода, за да се достъпва и в методите на програмата. Ако не решаваме задачата с методи, това няма да е нужно
-       
+        static List<Hero> party = new List<Hero>();
+        //изкарваме листа извън Main метода, за да се достъпва и в методите на програмата. Ако не решаваме задачата с методи, това няма да е нужно
+
         static void Main(string[] args)
         {
-          
+
             int countOfHeroes = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfHeroes; i++)
@@ -60,44 +89,91 @@ namespace _03.HeroesOfCodeAndLogicVII_Exercises
                 }
                 else if (command == "Recharge")
                 {
-                    int amount = int.Parse(arguments[2]);
+                    int amountMP = int.Parse(arguments[2]);
 
-                    Recharge(heroName, amount);
+                    Recharge(heroName, amountMP);
                 }
                 else if (command == "Heal")
                 {
-                    int amount = int.Parse(arguments[2]);
+                    int amountHP = int.Parse(arguments[2]);
 
-                    Heal(heroName, amount);
+                    Heal(heroName, amountHP);
                 }
-
             }
-        }
 
-        
+            party.ForEach(h => Console.Write(h));
+        }
 
         static void CastSpell(string heroName, int mPNeeded, string spellName)
         {
-            foreach (var hero in party)
+            Hero foundHero = party.FirstOrDefault(h => h.Name == heroName);
+            if (foundHero == null)
             {
-                if (hero.MP >= mPNeeded)
-                    hero.MP -= mPNeeded;
-                Console.WriteLine($"{heroName} has successfully cast {spellName} and now has {hero.MP} MP!");
+                return; // излез от метода
+            }
+
+            if (foundHero.MP >= mPNeeded)
+            {
+                foundHero.MP -= mPNeeded;
+                Console.WriteLine($"{foundHero.Name} has successfully cast {spellName} and now has {foundHero.MP} MP!");
+            }
+            else
+            {
+                Console.WriteLine($"{foundHero.Name} does not have enough MP to cast {spellName}!");
             }
         }
 
+
         static void TakeDamage(string heroName, int damage, string attacker)
         {
-            throw new NotImplementedException();
+            Hero foundHero = party.FirstOrDefault(h => h.Name == heroName);
+
+            if (foundHero == null)
+            {
+                return; // излез от метода
+            }
+
+            foundHero.HP -= damage;
+
+            if (foundHero.HP > 0)
+            {
+                Console.WriteLine($"{foundHero.Name} was hit for {damage} HP by {attacker} and now has {foundHero.HP} HP left!");
+            }
+            else
+            {
+                party.Remove(foundHero);
+                Console.WriteLine($"{foundHero.Name} has been killed by {attacker}!");
+            }
+
         }
-        static void Recharge(string heroName, int amount)
+
+        static void Recharge(string heroName, int amountMP)
         {
-            throw new NotImplementedException();
+            Hero foundHero = party.FirstOrDefault(h => h.Name == heroName);
+
+            if (foundHero == null)
+            {
+                return; // излез от метода
+            }
+
+            int recovered = foundHero.Recharge(amountMP); // от тук създаваме метод в класа Hero, за да намерим разликата между максималната стойност 200 на MP
+            Console.WriteLine($"{foundHero.Name} recharged for {recovered} MP!");
         }
-        
-        static void Heal(string heroName, int amount)
+
+        static void Heal(string heroName, int amountHP)
         {
-            throw new NotImplementedException();
+            Hero foundHero = party.FirstOrDefault(h => h.Name == heroName);
+
+
+            if (foundHero == null)
+            {
+                return; // излез от метода
+            }
+
+            int recovered = foundHero.Heal(amountHP);
+            // от тук по същия начин като в Recharge създаваме метод в класа Hero, за да намерим разликата между максималната стойност 100 на НР
+
+            Console.WriteLine($"{foundHero.Name} healed for {amountHP} HP!");
         }
     }
 }
