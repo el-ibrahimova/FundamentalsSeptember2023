@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ActivationKeys-Exercises
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmojiDetector-Exercises", "02.EmojiDetector-Exercises\02.EmojiDetector-Exercises.csproj", "{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HeroesOfCodeAndLogicVII-Exercises", "03.HeroesOfCodeAndLogicVII-Exercises\03.HeroesOfCodeAndLogicVII-Exercises.csproj", "{7E8420BC-0C5C-4A8C-B547-0479FD020740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
