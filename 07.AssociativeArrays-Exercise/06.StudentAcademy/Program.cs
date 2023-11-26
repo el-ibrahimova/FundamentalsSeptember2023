@@ -5,7 +5,7 @@
         public Student(string name)
         {
             Name = name;
-            Grades = new List <decimal>();
+            Grades = new List<decimal>();
         }
         public string Name { get; set; }
         public List<decimal> Grades { get; set; }
@@ -22,7 +22,7 @@
         {
             int studentsCount = int.Parse(Console.ReadLine());
 
-            Dictionary<string, Student> students  = new Dictionary<string, Student>();
+            Dictionary<string, Student> students = new Dictionary<string, Student>();
 
             for (int i = 0; i < studentsCount; i++)
             {
@@ -32,7 +32,7 @@
 
                 if (!students.ContainsKey(studentName))
                 {
-                   students.Add(studentName, new Student(studentName));
+                    students.Add(studentName, new Student(studentName));
                 }
                 students[studentName].Grades.Add(grade);
             }
