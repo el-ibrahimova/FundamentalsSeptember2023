@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.01.FancyBarcodes", "02.0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Pirates", "03.Pirates\03.Pirates.csproj", "{4D9E5C11-313E-44B1-8E61-798406DE69C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ActivationKeys-Exercises", "01.ActivationKeys-Exercises\01.ActivationKeys-Exercises.csproj", "{6F11E562-731D-472B-A5A5-9734F4B12648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.ActivationKeys-Exercises", "01.ActivationKeys-Exercises\01.ActivationKeys-Exercises.csproj", "{6F11E562-731D-472B-A5A5-9734F4B12648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.EmojiDetector-Exercises", "02.EmojiDetector-Exercises\02.EmojiDetector-Exercises.csproj", "{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.EmojiDetector-Exercises", "02.EmojiDetector-Exercises\02.EmojiDetector-Exercises.csproj", "{0B8CEDCA-F9D7-4423-A0E5-9D3359F20B2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.HeroesOfCodeAndLogicVII-Exercises", "03.HeroesOfCodeAndLogicVII-Exercises\03.HeroesOfCodeAndLogicVII-Exercises.csproj", "{7E8420BC-0C5C-4A8C-B547-0479FD020740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.HeroesOfCodeAndLogicVII-Exercises", "03.HeroesOfCodeAndLogicVII-Exercises\03.HeroesOfCodeAndLogicVII-Exercises.csproj", "{7E8420BC-0C5C-4A8C-B547-0479FD020740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PasswordReset", "01.PasswordReset\01.PasswordReset.csproj", "{D59F6443-F685-4BB0-AF1E-A95D47BCF114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E8420BC-0C5C-4A8C-B547-0479FD020740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59F6443-F685-4BB0-AF1E-A95D47BCF114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59F6443-F685-4BB0-AF1E-A95D47BCF114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59F6443-F685-4BB0-AF1E-A95D47BCF114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59F6443-F685-4BB0-AF1E-A95D47BCF114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
