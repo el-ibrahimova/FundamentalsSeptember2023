@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.PasswordReset", "01.Pass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TheImitationGame", "01.TheImitationGame\01.TheImitationGame.csproj", "{37CB99B4-4796-4E38-ABCE-503E222C6A80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NeedForSpeedIII", "03.NeedForSpeedIII\03.NeedForSpeedIII.csproj", "{87F4DA3E-E717-4613-9C2A-30D6E771C00D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{37CB99B4-4796-4E38-ABCE-503E222C6A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37CB99B4-4796-4E38-ABCE-503E222C6A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37CB99B4-4796-4E38-ABCE-503E222C6A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

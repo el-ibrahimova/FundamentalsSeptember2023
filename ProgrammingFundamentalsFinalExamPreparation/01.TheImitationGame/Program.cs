@@ -23,24 +23,20 @@ namespace _01.TheImitationGame
                     string leftLetters = encryptedMessage.Substring(numberOfLetters);
                     message = message.Append(leftLetters);
                     newMessage = message.Append(lettersToAdd).ToString();
-
                 }
                 else if (command == "Insert")
                 {
                     int index = int.Parse(arguments[1]);
                     string value = arguments[2];
                     newMessage = encryptedMessage.Insert(index, value);
-
                 }
                 else // ChangeAll
                 {
                     string substring = arguments[1];
                     string replacement = arguments[2];
-
                     newMessage = encryptedMessage.Replace(substring, replacement);
                 }
-                encryptedMessage = newMessage;
-            
+                encryptedMessage = newMessage;            
             }
             Console.WriteLine($"The decrypted message is: {newMessage}");
         }
