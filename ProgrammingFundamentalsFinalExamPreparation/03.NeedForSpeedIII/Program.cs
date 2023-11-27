@@ -32,25 +32,9 @@ namespace _03.NeedForSpeedIII
 
         public void Refuel(string model, int fuel)
         {
-            int refuel = 0;
-            if (FuelAvailable < 75)
-            {
-                FuelAvailable += fuel;
-
-                if (FuelAvailable >= 75)
-                {
-                    int max = FuelAvailable - 75;
-                    if (max >= 0)
-                    {
-                        FuelAvailable = 75;
-                        refuel = 75 - fuel;
-                    }
-                }
-                else
-                {
-                    refuel = fuel;
-                }
-            }
+            int refuel = Math.Min(fuel, 75-FuelAvailable);
+            FuelAvailable += refuel;
+            
             Console.WriteLine($"{Model} refueled with {refuel} liters");
 
         }
@@ -100,28 +84,30 @@ namespace _03.NeedForSpeedIII
                 {
                     int distance = int.Parse(commands[2]);
                     int fuel = int.Parse(commands[3]);
-                    cars.Find(c => c.Model == model).DriveCar(fuel, distance);
-
-                    foreach (var car in cars)
-                    {
-                        if (car.Mileage == 100000)
+                   
+                    Car foundCar = cars.FirstOrDefault(c => c.Model == model);
+                    foundCar.DriveCar(fuel, distance);
+                                       
+                        if (foundCar.Mileage >= 100000)
                         {
-                            cars.Remove(car);
+                            cars.Remove(foundCar);
                             Console.WriteLine($"Time to sell the {model}!");
                         }
-                    }
                 }
                 else if (command == "Refuel")
                 {
                     int fuel = int.Parse(commands[2]);
 
-                    cars.Find(c => c.Model == model).Refuel(model, fuel);
+                    Car foundCar = cars.FirstOrDefault(c => c.Model == model);
+                    foundCar.Refuel(model, fuel);
 
                 }
                 else // "Revert"
                 {
                     int km = int.Parse(commands[2]);
-                    cars.Find(c => c.Model == model).Revert(model, km);
+                  
+                    Car foundCar = cars.FirstOrDefault(c => c.Model == model);
+                    foundCar.Revert(model, km);
                 }
 
             }
