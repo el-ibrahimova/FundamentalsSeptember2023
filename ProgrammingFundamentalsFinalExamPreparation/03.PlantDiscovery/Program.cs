@@ -27,16 +27,6 @@ namespace _03.PlantDiscovery
         public int Rarity { get; set; }
         public List<double> Rating { get; set; }
 
-        public void UpdateRarity(int rarity)
-        {
-            Rarity += rarity;
-        }
-
-        public override string ToString()
-        {
-             string result = $"- {Name}; Rarity: {Rarity}; Rating: {Rating.Average():f2}\n";
-            return result.Trim();
-        }
     }
     internal class Program
     {
@@ -48,7 +38,7 @@ namespace _03.PlantDiscovery
 
             for (int i = 0; i < n; i++)
             {
-                string[] plantsDetails = Console.ReadLine().Split("<->",StringSplitOptions.RemoveEmptyEntries);
+                string[] plantsDetails = Console.ReadLine().Split("<->", StringSplitOptions.RemoveEmptyEntries);
 
                 string name = plantsDetails[0];
                 int rarity = int.Parse(plantsDetails[1]);
@@ -61,15 +51,14 @@ namespace _03.PlantDiscovery
                 }
                 else
                 {
-                    plants[name].UpdateRarity(rarity);
+                    plants[name].Rarity += rarity;
                 }
             }
-
 
             string input;
             while ((input = Console.ReadLine()) != "Exhibition")
             {
-                string[] commands = input.Split(": ",StringSplitOptions.RemoveEmptyEntries);
+                string[] commands = input.Split(": ", StringSplitOptions.RemoveEmptyEntries);
                 string command = commands[0];
                 string commandDetails = commands[1];
 
@@ -79,6 +68,7 @@ namespace _03.PlantDiscovery
                 if (!plants.ContainsKey(name))
                 {
                     Console.WriteLine("error");
+                    continue;
                 }
 
                 if (command == "Rate")
@@ -94,15 +84,18 @@ namespace _03.PlantDiscovery
                 else // "Reset"
                 {
                     plants[name].Rating.Clear();
-                    plants[name].Rating.Add(0);
                 }
             }
 
             Console.WriteLine("Plants for the exhibition:");
-            foreach (KeyValuePair <string,Plant>  pl in plants)
+            foreach (var pl in plants)
             {
-              Console.WriteLine(pl.Value);
-
+                double averageRating = 0;
+                if (pl.Value.Rating.Count > 0)
+                {
+                    averageRating = pl.Value.Rating.Sum() / pl.Value.Rating.Count;
+                }
+                Console.WriteLine($"- {pl.Key}; Rarity: {pl.Value.Rarity}; Rating: {averageRating:f2}");
             }
         }
     }
