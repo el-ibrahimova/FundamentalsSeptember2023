@@ -16,7 +16,7 @@ namespace _03.NeedForSpeedIII
         public string Model { get; set; }
         public int Mileage { get; set; }
         public int FuelAvailable { get; set; }
-        public void DriveCar(int fuelNeeded, int distance)
+        public void Drive(int fuelNeeded, int distance)
         {
             if (fuelNeeded <= FuelAvailable)
             {
@@ -86,7 +86,7 @@ namespace _03.NeedForSpeedIII
                     int fuel = int.Parse(commands[3]);
                    
                     Car foundCar = cars.FirstOrDefault(c => c.Model == model);
-                    foundCar.DriveCar(fuel, distance);
+                    foundCar.Drive(fuel, distance);
                                        
                         if (foundCar.Mileage >= 100000)
                         {

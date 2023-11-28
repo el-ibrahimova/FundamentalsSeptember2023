@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.HeroesOfCodeAndLogicVII-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.PasswordReset", "01.PasswordReset\01.PasswordReset.csproj", "{D59F6443-F685-4BB0-AF1E-A95D47BCF114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TheImitationGame", "01.TheImitationGame\01.TheImitationGame.csproj", "{37CB99B4-4796-4E38-ABCE-503E222C6A80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.TheImitationGame", "01.TheImitationGame\01.TheImitationGame.csproj", "{37CB99B4-4796-4E38-ABCE-503E222C6A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NeedForSpeedIII", "03.NeedForSpeedIII\03.NeedForSpeedIII.csproj", "{87F4DA3E-E717-4613-9C2A-30D6E771C00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.NeedForSpeedIII", "03.NeedForSpeedIII\03.NeedForSpeedIII.csproj", "{87F4DA3E-E717-4613-9C2A-30D6E771C00D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PlantDiscovery", "03.PlantDiscovery\03.PlantDiscovery.csproj", "{CC2343E1-F183-4516-B70F-5E0D827BB399}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F4DA3E-E717-4613-9C2A-30D6E771C00D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
