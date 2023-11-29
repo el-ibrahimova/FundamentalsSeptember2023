@@ -23,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.TheImitationGame", "01.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.NeedForSpeedIII", "03.NeedForSpeedIII\03.NeedForSpeedIII.csproj", "{87F4DA3E-E717-4613-9C2A-30D6E771C00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PlantDiscovery", "03.PlantDiscovery\03.PlantDiscovery.csproj", "{CC2343E1-F183-4516-B70F-5E0D827BB399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.PlantDiscovery", "03.PlantDiscovery\03.PlantDiscovery.csproj", "{CC2343E1-F183-4516-B70F-5E0D827BB399}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.AdAstra", "02.AdAstra\02.AdAstra.csproj", "{167577F6-CC3A-4861-B5B3-38848EBDC2D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MirrorWords", "02.MirrorWords\02.MirrorWords.csproj", "{E9A557E4-A329-4B77-AD0B-AC2F6ED8F747}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC2343E1-F183-4516-B70F-5E0D827BB399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167577F6-CC3A-4861-B5B3-38848EBDC2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167577F6-CC3A-4861-B5B3-38848EBDC2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167577F6-CC3A-4861-B5B3-38848EBDC2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167577F6-CC3A-4861-B5B3-38848EBDC2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A557E4-A329-4B77-AD0B-AC2F6ED8F747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A557E4-A329-4B77-AD0B-AC2F6ED8F747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A557E4-A329-4B77-AD0B-AC2F6ED8F747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A557E4-A329-4B77-AD0B-AC2F6ED8F747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
