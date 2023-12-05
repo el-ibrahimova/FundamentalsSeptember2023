@@ -4,6 +4,17 @@ using System.Threading.Channels;
 
 namespace _03.HeroesOfCodeAndLogicVII_Exercises
 {
+
+/*
+2
+Solmyr 85 120
+Kyrre 99 50
+Heal - Solmyr - 10
+Recharge - Solmyr - 50
+TakeDamage - Kyrre - 66 - Orc
+CastSpell - Kyrre - 15 - ViewEarth
+End
+*/
     public class Hero
     {
         public Hero(string name, int hP, int mP)
