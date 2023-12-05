@@ -1,9 +1,19 @@
 ﻿namespace _01.ActivationKeys_Exercises
 {
+
+    /*
+abcdefghijklmnopqrstuvwxyz
+Slice>>>2>>>6
+Flip>>>Upper>>>3>>>14
+Flip>>>Lower>>>5>>>7
+Contains>>>def
+Contains>>>deF
+Generate
+     */
     internal class Program
     {
         static string activationKey;
-        // пищшем го като пропърти на класа Program, за да е видимо във всички методи (за да не се повтаря като променлива и аргумент в методите на класа)
+        // пишем го като пропърти на класа Program, за да е видимо във всички методи (за да не се повтаря като променлива и аргумент в методите на класа)
 
         static void Main(string[] args)
         {
