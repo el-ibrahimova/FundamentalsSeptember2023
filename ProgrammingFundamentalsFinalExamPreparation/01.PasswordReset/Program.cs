@@ -2,6 +2,14 @@
 
 namespace _01.PasswordReset
 {
+/*
+ Siiceercaroetavm!:?:ahsott.:i:nstupmomceqr 
+TakeOdd
+Cut 15 3
+Substitute :: -
+Substitute | ^
+Done
+*/
     internal class Program
     {
         static void Main(string[] args)

@@ -1,5 +1,12 @@
 ﻿namespace _01.SecretChat
 {
+/*
+heVVodar!gniV
+ChangeAll:|:V:|:l
+Reverse:|:!gnil
+InsertSpace:|:5
+Reveal
+*/
     internal class Program
     {
         static void Main(string[] args)
