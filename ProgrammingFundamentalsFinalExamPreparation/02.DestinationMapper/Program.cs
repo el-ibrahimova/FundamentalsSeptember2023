@@ -3,7 +3,10 @@
 namespace _02.DestinationMapper
 {
     internal class Program
-    {     
+    {
+/*
+=Hawai=/Cyprus/=Invalid/invalid==i5valid=/I5valid/=i=
+*/
         static void Main(string[] args)
         {  
             List<string> destinations = new List<string>();
