@@ -5,6 +5,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace _01.WorldTour
 {
+/*
+Hawai::Cyprys-Greece
+Add Stop:7:Rome
+Remove Stop:11:16
+Switch:Hawai:Bulgaria
+Travel
+*/
     internal class Program
     {
         static void Main(string[] args)

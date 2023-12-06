@@ -4,6 +4,12 @@ namespace _02._01.FancyBarcodes
 {
     internal class Program
     {
+/*
+3
+@#FreshFisH@#
+@###Brea0D@###
+@##Che4s6E@##
+*/
         static void Main(string[] args)
         {
 
