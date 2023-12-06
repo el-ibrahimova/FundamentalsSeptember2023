@@ -2,6 +2,13 @@
 
 namespace _01.TheImitationGame
 {
+/*
+zzHe
+ChangeAll|z|l
+Insert|2|o
+Move|3
+Decode
+*/
     internal class Program
     {
         static void Main(string[] args)
