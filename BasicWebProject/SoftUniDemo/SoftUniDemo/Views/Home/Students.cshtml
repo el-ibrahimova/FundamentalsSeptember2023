@@ -1,0 +1,11 @@
+﻿
+@model List<Student>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@foreach (var students in Model)
+{
+<p>@students.Name</p>
+}
