@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ParkingSystem.Data;
 
 namespace ParkingSystem.Controllers
 {
@@ -6,7 +7,7 @@ namespace ParkingSystem.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(DataAccess.Cars);
         }
     }
 }

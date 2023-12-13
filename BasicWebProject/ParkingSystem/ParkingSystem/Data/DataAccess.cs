@@ -1,4 +1,6 @@
-﻿namespace ParkingSystem.Data
+﻿using ParkingSystem.Data.Models;
+
+namespace ParkingSystem.Data
 {
     public class DataAccess
     {
